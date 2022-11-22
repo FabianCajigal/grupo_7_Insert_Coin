@@ -13,10 +13,10 @@
 
 * https://www.eneba.com/
 * https://www.integradosargentinos.com/
-* https://www.venex.com.ar/  En este sitio lo que más nos llamó la atención fue el diseño, los colores llamativos, y aquellas promociones vistosas.
-* https://compragamer.com/armatupc  En este sitio lo que más nos llamó la atención fueron las marcas promocionadas en la parte baja con "sistema tipo giratorio"
-* https://compucordoba.com.ar/   En este sitio lo que más nos llamó la atención fue el ingreso de la pagina (logo girando) hasta que finaliza el cargado.
-* https://www.compugarden.com.ar/
-* https://www.slot-one.com.ar/
-* https://spacegamer.com.ar/
-* https://katech.com.ar/
+* https://www.venex.com.ar/ - En este sitio lo que más nos llamó la atención fue el diseño, los colores llamativos, y aquellas promociones vistosas.
+* https://compragamer.com/armatupc - En este sitio lo que más nos llamó la atención fueron las marcas promocionadas en la parte baja con "sistema tipo giratorio"
+* https://compucordoba.com.ar/ - En este sitio lo que más nos llamó la atención fue el ingreso de la pagina (logo girando) hasta que finaliza el cargado.
+* https://www.compugarden.com.ar/ - En este sitio lo que más nos llamó la atención fue el home simplista y compacto, con categorías en lugar de productos (a excepción de los destacados).
+* https://www.slot-one.com.ar/ - En este sitio lo que más nos llamó la atención fue el diseño llamativo y moderno, con una paleta de colores atractiva y un logo/nombre que nos inspiró (temática gaming retro).
+* https://spacegamer.com.ar/ - En este sitio lo que más nos llamó la atención fueron las animaciones, la paleta de colores llamativa y unas categorías bien definidas.
+* https://katech.com.ar/ - En este sitio lo que más nos llamó la atención fue la elección moderna de diseño y la identidad visual mediante el uso de mascotas que acompañan los diseños, categorías y productos.
