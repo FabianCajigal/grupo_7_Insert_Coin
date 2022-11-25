@@ -11,8 +11,8 @@
 
 #### Sitios de referencia:
 
-* https://www.eneba.com/
-* https://www.integradosargentinos.com/
+* https://www.eneba.com/ - En este sitio lo que más nos llamó la atención es la organización. Muestra una estructura fácil de usar y entender, separa los productos que ofrece en módulos: recomendaciones según el usuario, top ten de juegos, mejores tarjetas de regalo, próximos juegos y categoración final por tipos de juegos.
+* https://www.integradosargentinos.com/ - En este sitio lo que más nos llamó la atención que es un sitio que ofrece tecnología permitiendo integrarla para armar tu equipo en función de tus necesidades y requerimientos, aportando todas las opciones tanto en equipos como accesorios. Es un sitio dinámico, sencillo, llamativo visualmente, de fácil uso, coloca un paso a paso de compra.
 * https://www.venex.com.ar/ - En este sitio lo que más nos llamó la atención fue el diseño, los colores llamativos, y aquellas promociones vistosas.
 * https://compragamer.com/armatupc - En este sitio lo que más nos llamó la atención fueron las marcas promocionadas en la parte baja con "sistema tipo giratorio"
 * https://compucordoba.com.ar/ - En este sitio lo que más nos llamó la atención fue el ingreso de la pagina (logo girando) hasta que finaliza el cargado.
