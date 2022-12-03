@@ -1,0 +1,24 @@
+{
+  "name": "grupo_7_insert_coin",
+  "version": "1.0.0",
+  "description": "- **Paula Núñez**, Huerta Grande, Córdoba. Profesora de Nivel Primario. Aficionada a la costura.\r - **Paula Iturra**, Venezuela. Psicóloga Social, Ocupación: Especialista en Procesos para automatizar Centros de Atención al Cliente. Aficionada a la música.\r - **Lautaro Patyn**, Campana, Buenos Aires. Analista Funcional. Aficionado a los videojuegos.\r - **Fabian Cajigal**, Villa Luro, Ciudad de Buenos Aires. Lic en Administracion Empresas UBA. Hincha de Velez. Jugador amateur de futsal.\r - **Camilo Peña**, Medellín, Colombia. Tecnólogo en Electrónica, mantenimiento y ensamble de parques de diversiones. Aficionado a los videojuegos.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FabianCajigal/grupo_7_Insert_Coin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FabianCajigal/grupo_7_Insert_Coin/issues"
+  },
+  "homepage": "https://github.com/FabianCajigal/grupo_7_Insert_Coin#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}
