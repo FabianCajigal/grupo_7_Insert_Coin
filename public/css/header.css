@@ -12,7 +12,7 @@ header {
 .burger-menu {
     color: var(--blanco);
     font-size: 1.2rem;
-    width: 12%;
+    width: 16%;
 }
 
 .logo {
@@ -90,6 +90,10 @@ header {
 
     .account a, .cart a, .burger-menu {
         font-size: 1.4rem;
+    }
+
+    .burger-menu {
+        width: 20%;
     }
 }
 
