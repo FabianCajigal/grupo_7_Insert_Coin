@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="css/productCart.css">
     <title>Insert Coin</title>
 </head>
+
 <body>
     <header>
         <section class="header-top-bar">
@@ -28,8 +30,8 @@
                     <li><a href="#">Hardware <i class="fas fa-chevron-down"></i></a></li>
                     <li><a href="#">Computadoras <i class="fas fa-chevron-down"></i></a></li>
                     <li><a href="#">Notebooks <i class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="#">Periféricos <i class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="#">Accesorios <i class="fas fa-chevron-down"></i></a></li>
+                    <li><a href="#">Periféricos y accesorios <i class="fas fa-chevron-down"></i></a></li>
+                    <li><a href="#">Consolas <i class="fas fa-chevron-down"></i></a></li>
                     <li><a href="#">Videojuegos <i class="fas fa-chevron-down"></i></a></li>
                 </ul>
             </nav>
@@ -59,9 +61,59 @@
             </form>
         </div>
     </header>
-    
+
     <main>
-        
+        <article class="descripcion-pedido">
+            <h2>Descripción de tu pedido</h2>
+        </article>
+
+        <ul class="encabezado-pedido">
+            <li>Producto</li>
+            <li>Cantidad</li>
+            <li>Subtotal</li>
+        </ul>
+
+<section class="carrito">
+        <ul class="producto-en-carrito">
+            <li><img class="foto"
+                    src="/img/Computadoras/imagen-combo_gamer_144hz_ryzen_3100_gtx_1650_super_ram_8_ssd_240_fuente_real_500_aoc_24_144hz-2087726-800-600-1-75.jpg"
+                    alt="Computadora"></li>
+            <li><label for="cantidad"></label>
+                <input type="number" id="cantidad" name="cantidad" min="1" max="100">
+            </li>
+            <li><label for="subtotal"></label>
+                <input type="number" id="subtotal" name="subtotal" min="1" max="">
+                <i class="fas fa-minus-circle"></i>
+            </li>
+        </ul>
+
+        <ul class="producto-en-carrito">
+            <li><img class="foto"
+                    src="/img/Hardware/GIGABYTE GeForce RTX 3080 Turbo 10G Tarjeta gráfica GV-N3080TURBO-10GD-S (2X HDMI 2.1, 2X DisplayPort 1.4a, DirectX 12 Ultimate).jpg"
+                    alt="Computadora"></li>
+            <li><label for="cantidad"></label>
+                <input type="number" id="cantidad" name="cantidad" min="1" max="100">
+            </li>
+            <li><label for="subtotal"></label>
+                <input type="number" id="subtotal" name="subtotal" min="1" max="">
+                <i class="fas fa-minus-circle"></i>
+            </li>
+        </ul>
+
+        <ul class="producto-en-carrito">
+            <li><img class="foto"
+                    src="/img/Hardware/GIGABYTE NVIDIA GeForce RTX 3080 Ti VISION OC 12GB Graphics Card (PCIe 4.0, 12GB GDDR6X, HDMI 2.1, DisplayPort 1.4a, 3rd Generation Tensor Cores, 1710MHZ core clock).jpg"
+                    alt="Computadora"></li>
+            <li><label for="cantidad"></label>
+                <input type="number" id="cantidad" name="cantidad" min="1" max="100">
+            </li>
+            <li><label for="subtotal"></label>
+                <input type="number" id="subtotal" name="subtotal" min="1" max="">
+                <i class="fas fa-minus-circle"></i>
+            </li>
+        </ul>
+
+    </section>
     </main>
 
     <footer>
@@ -97,4 +149,5 @@
         </section>
     </footer>
 </body>
+
 </html>
