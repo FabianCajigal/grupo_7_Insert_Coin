@@ -28,5 +28,11 @@
 }
 .foto{
     width: 150px; 
-    margin-left: 15px;
+    /* margin-left: 15px; */
+}
+
+.productos-similares{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
