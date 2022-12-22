@@ -2,23 +2,35 @@
 @import url(header.css);
 @import url(footer.css);
 
+.encabezado-pedido{
+    /* display: flex; */
+    width: 80%;
+}
 .carrito{
-    max-width:95%;
-    margin-left:5%;
-    align-items: center;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+.productos-similares{
+    display:none;
+    
+    
+}
+.producto-en-carrito{
+display: flex;
 }
 .descripcion-pedido{
-    margin-left: 15px;
+    margin-left: 30px;
     margin-top: 15px;
 }
 
 .encabezado-pedido{
-    max-width: 95%;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 10px ;
-    margin-right: 10px;
+    width: 65%  ;
+    
 }
 
 .producto-en-carrito{
@@ -31,8 +43,36 @@
     /* margin-left: 15px; */
 }
 
-.productos-similares{
+
+
+/*------------------------ MEDIA QUERIES ------------------------*/
+/*------------------------TABLET------------------------*/
+@media (min-width: 480px){}
+
+
+
+
+
+/* ------------- COMPUTADORA ------------- */
+@media (min-width: 860px){
+/* .carrito{
+    width:45%;
+ margin: 0 auto 0 auto;
+}
+.producto-en-carrito{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+} */
+    .productos-similares{
+       
+        display: flex; 
+       flex-direction: column;
+       width:30%;
+       height: 100%;
+       margin-left: 20px ;
+       float: right;
+ 
+    }
+    .productos-similares .foto{
+        width: 200px
+    }
 }
