@@ -1,0 +1,32 @@
+@import url(var.css);
+@import url(header.css);
+@import url(footer.css);
+
+.carrito{
+    max-width:95%;
+    margin-left:5%;
+    align-items: center;
+}
+.descripcion-pedido{
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.encabezado-pedido{
+    max-width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px ;
+    margin-right: 10px;
+}
+
+.producto-en-carrito{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.foto{
+    width: 150px; 
+    margin-left: 15px;
+}

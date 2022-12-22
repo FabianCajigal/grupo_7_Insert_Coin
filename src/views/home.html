@@ -5,12 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/home.css">
-    <title>Insert Coin - Home</title>
+    <title>Insert Coin</title>
 </head>
 <body>
     <header>
         <section class="header-top-bar">
+
             <div class="burger-menu">
                 <i class="fas fa-bars"></i>
             </div>
@@ -25,7 +29,7 @@
                     <li><a href="#">Computadoras <i class="fas fa-chevron-down"></i></a></li>
                     <li><a href="#">Notebooks <i class="fas fa-chevron-down"></i></a></li>
                     <li><a href="#">Periféricos <i class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="#">Accesorios <i class="fas fa-chevron-down"></i></a></li>
+                    <li><a href="#">Consolas <i class="fas fa-chevron-down"></i></a></li>
                     <li><a href="#">Videojuegos <i class="fas fa-chevron-down"></i></a></li>
                 </ul>
             </nav>
@@ -39,12 +43,13 @@
                 </div>
 
                 <div class="account">
-                    <a href="/register">
+                    <a href="/login">
                         <i class="fas fa-user-circle"></i>
                         <span>Cuenta</span>
                     </a>
                 </div>
             </div>
+
         </section>
 
         <div class="search">
@@ -54,6 +59,50 @@
             </form>
         </div>
     </header>
+    
+    <main>
+        <div style="margin:auto;width:50%;padding-block:10%;text-align:center">
+            <h2>Links a las vistas (para testing):</h2>
+            <ul>
+                <li style="margin-bottom:10px;margin-top:10px"><a href="/login">LOGIN</a></li>
+                <li style="margin-bottom:10px"><a href="/register">REGISTER</a></li>
+                <li style="margin-bottom:10px"><a href="/productCart">CARRITO</a></li>
+                <li style="margin-bottom:10px"><a href="/productDetail">DETALLE</a></li>
+            </ul>
+        </div>
+    </main>
 
+    <footer>
+        <section class="footer-links">
+            <ul class="links">
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Dejanos tu opinión</a></li>
+                <li class="terms"><a href="#">Términos y condiciones</a></li>
+                <li class="socials">Seguinos en nuestras redes</li>
+            </ul>
+        </section>
+
+        <section class="footer-bottom-row">
+            <section class="footer-info">
+                <ul class="info">
+                    <li><i class="far fa-envelope"></i> info@insertcoin.com</li>
+                    <li><i class="fab fa-whatsapp"></i> +54 9 123123123</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Calle Falsa 123, Buenos Aires</li>
+                </ul>
+            </section>
+
+            <figure class="footer-logo">
+                <a href="/"><img src="img/logo-blanco.png" alt="Logo Insert Coin" class="logo-img"></a>
+            </figure>
+
+            <section class="footer-socials">
+                <ul class="socials-icons">
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+            </section>
+        </section>
+    </footer>
 </body>
 </html>

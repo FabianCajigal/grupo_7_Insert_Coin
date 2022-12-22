@@ -1,6 +1,7 @@
 header {
     background-color: var(--azul);
     position: sticky;
+    top: 0;
     max-height: 160px;
 }
 
@@ -23,6 +24,7 @@ header {
 
 .nav-bar {
     display: none;
+    font-size: 0.9rem;
 }
 
 .nav-bar i {

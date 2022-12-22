@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/login.css">
     <title>Insert Coin</title>
 </head>
 <body>
@@ -60,44 +60,28 @@
         </div>
     </header>
     
-    <main>
-
+    <main> 
         <section>
 
-            <article class="title">
-                <h2>Crear cuenta</h2>
-            </article>
+        <article class="form">
+            <form action="/" method="post" class="create-form">             
+            <div>
+                <label for="Usuario">Usuario</label>
+                <input type="text" name="nombre" id="usuario" class="control" placeholder="Indique su usuario">
+            </div>
+            <br>
+            <div>
+                <label for="Contraseña">Contraseña</label>
+                <input type="password" name="contraseña" id="contraseña" class="control" placeholder="Indique su contraseña">
+            </div>
+            <br>
+                 <button type="submit" value="INGRESAR">INGRESAR</button>
+            <br>         
+                <button type="submit" value="REGISTRATE">REGISTRATE</button>
+            </form>
+        </article>
 
-            <article class="form">
-                <form action="/" method="post" class="create-form">
-
-                    <div class="form-control">
-                        <label for="email">Dirección de correo electrónico</label>
-                        <input type="email" name="email" id="email" class="control" required>
-                    </div>
-
-                    <div class="form-control">
-                        <label for="username">Usuario</label>
-                        <input type="text" name="username" id="username" class="control" required>
-                    </div>
-
-                    <div class="form-control">
-                        <label for="password">Contraseña</label>
-                        <input type="password" name="password" id="password" class="control" required>
-                    </div>
-
-                    <div class="form-control">
-                        <label for="password-confirm">Confirmar contraseña</label>
-                        <input type="password" name="password-confirm" id="password-confirm" class="control" required>
-                    </div>
-                    
-                    <button type="submit">CREAR CUENTA</button>
-
-                </form>
-            </article>
-
-        </section>
-
+        <section>
     </main>
 
     <footer>

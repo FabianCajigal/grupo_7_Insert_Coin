@@ -2,6 +2,12 @@
 @import url(header.css);
 @import url(footer.css);
 
+
+
+
+
+
+
 main {
     margin: auto;
     width: 90vw;
@@ -10,12 +16,9 @@ main {
 }
 
 main section {
-    margin-block: 10%;  
-    border: 1px solid var(--gris);
-    padding: 28px;
-    border-radius: 26px;
+    margin-block: 10%;
+    margin-bottom: 165px;
 }
-
 
 main .title {
     display: flex;
@@ -56,9 +59,10 @@ main .title {
 }
 
 
+
 /*------------------------ MEDIA QUERIES ------------------------*/
 
-/* @media (min-width: 860px) {
+@media (min-width: 860px) {
     main {
         max-width: 640px;
     }
@@ -68,4 +72,4 @@ main .title {
         padding: 28px;
         border-radius: 26px;
     }
-} */
+}

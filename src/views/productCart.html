@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/productCart.css">
     <title>Insert Coin</title>
 </head>
+
 <body>
     <header>
         <section class="header-top-bar">
@@ -59,45 +61,59 @@
             </form>
         </div>
     </header>
-    
+
     <main>
+        <article class="descripcion-pedido">
+            <h2>Descripción de tu pedido</h2>
+        </article>
 
-        <section>
+        <ul class="encabezado-pedido">
+            <li>Producto</li>
+            <li>Cantidad</li>
+            <li>Subtotal</li>
+        </ul>
 
-            <article class="title">
-                <h2>Crear cuenta</h2>
-            </article>
+<section class="carrito">
+        <ul class="producto-en-carrito">
+            <li><img class="foto"
+                    src="/img/Computadoras/imagen-combo_gamer_144hz_ryzen_3100_gtx_1650_super_ram_8_ssd_240_fuente_real_500_aoc_24_144hz-2087726-800-600-1-75.jpg"
+                    alt="Computadora"></li>
+            <li><label for="cantidad"></label>
+                <input type="number" id="cantidad" name="cantidad" min="1" max="100">
+            </li>
+            <li><label for="subtotal"></label>
+                <input type="number" id="subtotal" name="subtotal" min="1" max="">
+                <i class="fas fa-minus-circle"></i>
+            </li>
+        </ul>
 
-            <article class="form">
-                <form action="/" method="post" class="create-form">
+        <ul class="producto-en-carrito">
+            <li><img class="foto"
+                    src="/img/Hardware/GIGABYTE GeForce RTX 3080 Turbo 10G Tarjeta gráfica GV-N3080TURBO-10GD-S (2X HDMI 2.1, 2X DisplayPort 1.4a, DirectX 12 Ultimate).jpg"
+                    alt="Computadora"></li>
+            <li><label for="cantidad"></label>
+                <input type="number" id="cantidad" name="cantidad" min="1" max="100">
+            </li>
+            <li><label for="subtotal"></label>
+                <input type="number" id="subtotal" name="subtotal" min="1" max="">
+                <i class="fas fa-minus-circle"></i>
+            </li>
+        </ul>
 
-                    <div class="form-control">
-                        <label for="email">Dirección de correo electrónico</label>
-                        <input type="email" name="email" id="email" class="control" required>
-                    </div>
+        <ul class="producto-en-carrito">
+            <li><img class="foto"
+                    src="/img/Hardware/GIGABYTE NVIDIA GeForce RTX 3080 Ti VISION OC 12GB Graphics Card (PCIe 4.0, 12GB GDDR6X, HDMI 2.1, DisplayPort 1.4a, 3rd Generation Tensor Cores, 1710MHZ core clock).jpg"
+                    alt="Computadora"></li>
+            <li><label for="cantidad"></label>
+                <input type="number" id="cantidad" name="cantidad" min="1" max="100">
+            </li>
+            <li><label for="subtotal"></label>
+                <input type="number" id="subtotal" name="subtotal" min="1" max="">
+                <i class="fas fa-minus-circle"></i>
+            </li>
+        </ul>
 
-                    <div class="form-control">
-                        <label for="username">Usuario</label>
-                        <input type="text" name="username" id="username" class="control" required>
-                    </div>
-
-                    <div class="form-control">
-                        <label for="password">Contraseña</label>
-                        <input type="password" name="password" id="password" class="control" required>
-                    </div>
-
-                    <div class="form-control">
-                        <label for="password-confirm">Confirmar contraseña</label>
-                        <input type="password" name="password-confirm" id="password-confirm" class="control" required>
-                    </div>
-                    
-                    <button type="submit">CREAR CUENTA</button>
-
-                </form>
-            </article>
-
-        </section>
-
+    </section>
     </main>
 
     <footer>
@@ -133,4 +149,5 @@
         </section>
     </footer>
 </body>
+
 </html>
