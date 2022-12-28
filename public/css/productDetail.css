@@ -10,6 +10,7 @@
 }
 .imagen{
 padding: 10px;
+max-width: 600px;
 }
 .descripcion{
     color: black;
@@ -17,15 +18,16 @@ padding: 10px;
     text-align: left;
     font-size: 17px;
 }
-.lista-detalle{
-    text-align: center;
+
+.lista-detalle li{
     list-style: circle;
 }
 .fa-credit-card {
     color: var(--azul);
 }
-.h2{
+main h2{
     color: black;
     font-weight: bold;
+    
 }
 
