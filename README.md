@@ -4,7 +4,6 @@
 
 #### Nuestro equipo:
 - **Paula Núñez**, Huerta Grande, Córdoba. Profesora de Nivel Primario. Aficionada a la costura.
-- **Paula Iturra**, Venezuela. Psicóloga Social, Ocupación: Especialista en Procesos para automatizar Centros de Atención al Cliente. Aficionada a la música.
 - **Lautaro Patyn**, Campana, Buenos Aires. Analista Funcional. Aficionado a los videojuegos.
 - **Fabian Cajigal**, Villa Luro, Ciudad de Buenos Aires. Lic en Administracion Empresas UBA. Hincha de Velez. Jugador amateur de futsal.
 - **Camilo Peña**, Medellín, Colombia. Tecnólogo en Electrónica, mantenimiento y ensamble de parques de diversiones. Aficionado a los videojuegos.
