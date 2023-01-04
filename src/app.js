@@ -11,7 +11,7 @@ app.use(express.static('public'));
 
 app.listen( 3030, () => console.log('Server running on http://localhost:3030') );
 
-/* app.use('/', mainRouter); */
+//  app.use('/', mainRouter);
 /* app.use('/account', userRouter); */
 /* app.use('/products', productRouter); */
 
