@@ -1,0 +1,75 @@
+<%- include('./partials/head') %>
+
+<%- include('./partials/header') %>
+
+<main>
+    <article class="descripcion-pedido">
+        <h2>Descripción de tu pedido</h2>
+    </article>
+    
+<div class="carrito">
+<div class="productos-similares">
+    <h2>Productos similares</h2>
+<ul> 
+
+   <li><img class="foto"
+    src="/img/Hardware/Board Asrock B550m Hdv Amd Am4 Chipset B550 Pcie 4.0 Matx.jpg"
+    alt="tarjeta grafica"></li>
+    <li><img class="foto"
+        src="/img/Notebooks/Portátil Asus M3500QA-L1224 -Ryzen 7-5800H 16GB SSD 512GB 15,6 Oled.jpg"
+        alt="Computadora"></li>
+</ul>
+</div>
+    <ul class="producto-en-carrito">
+        <li><img class="foto"
+                src="/img/Computadoras/imagen-combo_gamer_144hz_ryzen_3100_gtx_1650_super_ram_8_ssd_240_fuente_real_500_aoc_24_144hz-2087726-800-600-1-75.jpg"
+                alt="Computadora"></li>
+        <li><label for="cantidad"></label>
+            <input type="number" id="cantidad" name="cantidad" min="1" max="100">
+        </li>
+        <li><label for="subtotal"></label>
+            <input type="number" id="subtotal" name="subtotal">
+            <i class="fas fa-minus-circle"></i>
+        </li>
+    </ul>
+
+    <ul class="producto-en-carrito">
+        <li><img class="foto"
+                src="/img/Hardware/GIGABYTE GeForce RTX 3080 Turbo 10G Tarjeta gráfica GV-N3080TURBO-10GD-S (2X HDMI 2.1, 2X DisplayPort 1.4a, DirectX 12 Ultimate).jpg"
+                alt="tarjeta grafica"></li>
+        <li><label for="cantidad"></label>
+            <input type="number" id="cantidad" name="cantidad" min="1" max="100">
+        </li>
+        <li><label for="subtotal"></label>
+            <input type="number" id="subtotal" name="subtotal" min="9999999" max="">
+            <i class="fas fa-minus-circle"></i>
+        </li>
+    </ul>
+
+    <ul class="producto-en-carrito">
+        <li><img class="foto"
+                src="/img/Hardware/motherboard-gigabyte-b550m-ds3h-ac-wifi.jpg"
+                alt="tarjeta grafica"></li>
+        <li><label for="cantidad"></label>
+            <input type="number" id="cantidad" name="cantidad" min="1" max="100">
+        </li>
+        <li><label for="subtotal"></label>
+            <input type="number" id="subtotal" name="subtotal" min="1" max="">
+            <i class="fas fa-minus-circle"></i>
+        </li>
+    </ul>
+
+</div>
+<div>
+<h2>Resumen</h2>
+</div>
+<div>
+    cantidad de productos y precio
+</div>
+<div>
+    TOTAL
+        
+</div>
+
+</main>
+<%- include('./partials/footer') %>
