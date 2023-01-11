@@ -1,0 +1,93 @@
+@import url(var.css);
+@import url(header.css);
+@import url(footer.css);
+
+
+main {
+
+    text-align: center;
+}
+
+.titulares {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 5px;
+
+}
+
+.item {
+    margin: auto;
+    width: 80%;
+
+}
+
+.foto {
+    background-color: #ebebeb;
+    display: block;
+    margin: auto;
+
+}
+
+.descripción {
+    border-top: 1px solid var(--Gris-claro);
+    margin: 15px;
+}
+
+.nombre-producto {
+    margin-top: 10px;
+    display: none;
+}
+
+article {
+    margin-bottom: 10px;
+}
+
+.titulares {
+    font-size: 24px;
+}
+
+.precio {
+    font-size: 18px;
+}
+
+
+
+/*------------------------Media queries------------------------*/
+
+/*------------------------TABLET------------------------*/
+@media (min-width: 480px) {
+
+
+    .item {
+
+        width: 40%;
+
+    }
+
+    .nombre-producto {
+        display: block;
+    }
+
+    /* .foto{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+} */
+
+}
+
+/* ------------- COMPUTADORA ------------- */
+@media (min-width: 769px) {
+    /* .foto{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    } */
+
+    .item {
+        width: 20%;
+    }
+
+    .nombre-producto {
+        display: block;
+    }
+
+}
