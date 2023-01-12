@@ -26,7 +26,11 @@ main .title {
     margin-block: 12px;
     font-weight: bold;
 }
-
+.control-picture{
+    width: 100%;
+    padding: 3px 2px;
+    border-radius: 12px;
+}
 .create-form label {
     display: block;
     margin-bottom: 4px;
@@ -51,7 +55,7 @@ main .title {
     cursor: pointer;
     font-weight: bold;
 }
-.product type {
+.product-type {
     font-size: 15px;
     border: 1px var(--gris) solid;
     
