@@ -1,0 +1,60 @@
+<%- include('./partials/head') %>
+
+<%- include('./partials/header') %>
+
+<main>
+
+    <section>
+
+        <article class="title">
+            <h2>Crear cuenta</h2>
+        </article>
+
+        <article class="form">
+            <form action="/" method="post" class="create-form">
+
+                <div class="form-control">
+                    <label for="productname">Nombre del producto</label>
+                    <input type="text" name="productname" id="productname" class="control" required>
+                </div>
+
+                <div class="form-control">
+                    <label for="detail">Detalle</label>
+                    <input type="text" name="detail" id="detail" class="control" required>
+                </div>
+
+                <div class="form-control">
+                    <label for="price">Precio</label>
+                    <input type="text" name="price" id="price" class="control" required>
+                </div>
+                
+                <div class="form-control">
+                    <label for="discount">Descuento</label>
+                    <input type="text" name="discount" id="discount" class="control" required>
+                </div>
+
+                <div class="form-control">
+                    <label for="picture">Imágen</label>
+                    <input type="file" name="picture" id="picture" class="control" required>
+                </div>
+
+                <div class="form-control">
+                    <label for="product type">Tipo de producto</label><br>
+                    <input type="radio" name="Hardware" id="Hardware" class="product type">Hardware<br>
+                    <input type="radio" name="Computadoras" id="Computadoras" class="product type">Computadoras<br>
+                    <input type="radio" name="Notebooks" id="Notebooks" class="product type">Notebooks<br>
+                    <input type="radio" name="Periféricos" id="Perfiféricos" class="product type">Periféricos<br>
+                    <input type="radio" name="Consolas" id="Consolas" class="product type">Consolas<br>
+                    <input type="radio" name="Videojuegos" id="Videojuegos" class="product type">Videojuegos<br>
+                </div>
+
+                <button type="submit">SUBIR</button>
+
+            </form>
+        </article>
+
+    </section>
+
+</main>
+
+<%- include('./partials/footer') %>
