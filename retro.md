@@ -51,3 +51,30 @@ Tarea iniciada / Dudas o bloqueos (en caso de haber) / Tarea finalizada
 
 - No encontramos nada en esta categoría.
 ---
+
+## Sprint 3
+
+#### Comenzar a hacer.
+
+- Implementar instancia de reunión post-sprint para compartir métodos y formas utilizadas para llegar a los distintos resultados desde un punto de vista técnico, para nutrirnos del conocimiento y la práctica del otro. 
+
+#### Hacer más.
+
+- Metodología en el chat grupal de aviso de status de los tres momentos de trabajo, en lugar de dailies/weeklies: Tarea iniciada / Dudas o bloqueos (en caso de haber) / Tarea finalizada.
+
+#### Continuar haciendo.
+
+- Buen ambiente de trabajo y compañerismo.
+- Reuniones semanales de status/planning/group programming.
+- Participación activa en el chat grupal.
+- Responsabilidad con el cumplimiento de los tiempos de entrega.
+- Repaso grupal y solución de problemas y dudas ocasionales durante reuniones o en el chat grupal.
+
+#### Hacer menos.
+
+- No encontramos nada en esta categoría.
+
+#### Dejar de hacer.
+
+- No encontramos nada en esta categoría.
+---
