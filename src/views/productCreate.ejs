@@ -11,7 +11,7 @@
         </article>
 
         <article class="form">
-            <form action="/products" method="POST" class="create-form">
+            <form action="/products" method="POST" enctype="multipart/form-data" class="create-form">
 
                 <div class="form-control">
                     <label for="name">Nombre del producto</label>
@@ -54,7 +54,7 @@
 
                 <div class="form-control">
                     <label for="image">Imagen</label>
-                    <input type="file" name="image" id="image" class="control-picture">
+                    <input type="file" name="image" id="image" accept="image/*" class="control-picture">
                 </div>
 
                 <button type="submit">ENVIAR</button>

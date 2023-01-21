@@ -5,10 +5,23 @@ const products = require('../data/productsDataBase.json');
 
 const productController = {
     index: (req, res) => {
-        res.render('home', { title: 'home' })
+        const productsNews = products.filter(product => product.news == true);
+        res.render('home', { title: 'home', products: productsNews })
     },
     list: (req, res) => {
-        res.render('productList', { title: 'productList' })
+        if (!req.query.category && !req.query.search) {
+            res.render('productList', { title: 'productList', products: products })
+        }
+
+        if (req.query.category) {
+            const list = products.filter(product => product.category == req.query.category);
+            res.render('productList', { title: 'productList', products: list })
+        }
+        
+        if (req.query.search) {
+            const list = products.filter(product => product.name.toLowerCase().includes(req.query.search.toLowerCase()));
+            res.render('productList', { title: 'productList', products: list })
+        }
     },
     detail: (req, res) => {
         const product = products.find(product => product.id == req.params.id);
