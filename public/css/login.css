@@ -41,7 +41,7 @@ main .title {
 
 .control {
     width: 100%;
-    padding: 3px 2px;
+    padding: 8px 2px;
     border: 1px var(--gris) solid;
     border-radius: 12px;
 }
