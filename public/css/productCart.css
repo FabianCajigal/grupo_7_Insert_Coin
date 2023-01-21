@@ -3,87 +3,173 @@
 @import url(footer.css);
 
 
-.encabezado-pedido{
-    width: 80%;
-}
-.carrito{
+.bodyCart{
     margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 684px;
+    height: 500px;
+    /* background-color: aqua; */
+
+} 
+
+.tuCarrito{
+    width: 100%;
+    height: 100%;
+    /* background-color: brown; */
+}
+
+.resumen{
+    width: 60%;
+
+background-color: darkgreen;
+}
+/*------------------------ MEDIA QUERIES ------------------------*/
+/*------------------------TABLET------------------------*/
+@media (min-width: 600px) {}
+
+.cartBuy{
+    height: 500px;
+    /* background-color: aquamarine; */
+}
+.bodyCart{
+    width: 90%;
+}
+.tuCarrito{
+    width: 90%;
+    /* width: 65%; */
+    height:30%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row: repeat(3, 1.fr);;
+}
+.itemCarrito1 img{
     width: 100%;
     height: 100%;
 }
-.productos-similares{
-    display:none;
-    
-    
-}
-.producto-en-carrito{
-display: flex;
-}
-.descripcion-pedido{
-    margin-left: 30px;
-    margin-top: 15px;
+.itemCarrito1{
+    /* background-color: blueviolet; */
+    grid-row-start: 1 ;
+    grid-row-end: 3 ;
 }
 
-.encabezado-pedido{
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 65%  ;
-    
+/* .itemCarrito2{
+background-color: darkolivegreen;
 }
 
-.producto-en-carrito{
+.itemCarrito3{
+    background-color: rgb(39, 0, 212);
+    }
+
+    .itemCarrito4{
+        background-color: rgb(204, 127, 19);
+        }
+
+        .itemCarrito5{
+            background-color: rgb(154, 169, 207);
+            } */
+
+.resumen{
+    width: 65%;
+    height: 200px;
+    margin: 41px;
+    /* background-color: yellowgreen */
+}
+.slider{
+    display: none;
+}
+/* ------------- COMPUTADORA ------------- */
+@media (min-width: 860px) {
+    .cartBuy{
+        height: 500px;
+        /* background-color: aquamarine; */
+    }
+.bodyCart{
+    width: 90%;
+    height: 90%;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-}
-.foto{
-    width: 150px; 
+
+    
 
 }
-
-
-
-/*------------------------ MEDIA QUERIES ------------------------*/
-/*------------------------TABLET------------------------*/
-@media (min-width: 480px){}
-
-
-
-
-
-/* ------------- COMPUTADORA ------------- */
-@media (min-width: 860px){
-/* .carrito{
-    width:45%;
- margin: 0 auto 0 auto;
+.tuCarrito{
+    
+    width: 65%;
+    height: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row: repeat(3, 1.fr);
+    gap: 10px;
 }
-.producto-en-carrito{
-    display: flex;
+.itemCarrito1 img{
+    width: 100%;
+    height: 100%;
+}
+
+.itemCarrito1{
+    /* background-color: blueviolet; */
+    grid-row-start: 1 ;
+    grid-row-end: 3 ;
+
+}
+.itemCarrito1 img{
+    width: 100%;
+    height: 100%;
+}
+/* .itemCarrito2{
+background-color: darkolivegreen;
 } */
 
-.productos-similares h2{
-    margin-left: 2px;
-}
-.productos-similares li{
-    width: 300px;
-}
-    .productos-similares{
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    display: flex; 
-    flex-direction: column;
-    width:220px;
-    height: 100%;
-    margin-left: 20px ;
-    margin-right: 20px;
-    float: right;
-    
- 
+/* .itemCarrito3{
+    background-color: rgb(39, 0, 212);
     }
-    .productos-similares .foto{
-        width: 200px;
-        margin-left: 15px;
 
-    }
+    .itemCarrito4{
+        background-color: rgb(204, 127, 19);
+        }
+
+        .itemCarrito5{
+            background-color: rgb(154, 169, 207);
+            } */
+.resumen{
+    width: 65%;
+    height: 200px;
+    /* background-color: yellowgreen; */
+}
+.slider{
+    float: right;
+    margin: 0;
+    width: 30%;
+    height: 90%;
+    /* background-color: rgb(240, 116, 116); */
+    display: grid;
+    grid-row:repeat(3, 1.fr); ;
+    /* justify-content: space-around; */
+}
+
+.sliderItem1{
+    /* background-color: rgb(113, 255, 105); */
+    height: 100%;
+  
+}
+.sliderItem1 img{
+    margin: 0%;
+    width: 100%;
+    height: 70%;
+    
+}
+.sliderItem2{
+    /* background-color: rgb(143, 105, 255); */
+    height: 100%;
+}
+.sliderItem2 img{
+    margin: 0%;
+    width: 100%;
+    height: 70%;
+    
+}
+/* .sliderItem3{
+    background-color: rgb(255, 105, 105);
+} */
 }

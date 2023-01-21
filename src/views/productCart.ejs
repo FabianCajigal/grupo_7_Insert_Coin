@@ -1,75 +1,77 @@
 <%- include('./partials/head') %>
 
-<%- include('./partials/header') %>
+    <%- include('./partials/header') %>
 
-<main>
-    <article class="descripcion-pedido">
-        <h2>Descripción de tu pedido</h2>
-    </article>
-    
-<div class="carrito">
-<!-- <div class="productos-similares">
-    <h2>Productos similares</h2>
-<ul> 
+        <main>
+            <body>
+               <section class="cartBuy">
+                <div class="bodyCart" >
+                <div class="tuCarrito">
+                     
+                <!-- <h2>Tu Carrito</h2>  -->
+            
+                <div class="itemCarrito1">
+                  <img class="foto"
+                  src="/img/Computadoras/combo_gamer_144hz_ryzen_3100_gtx_1650_super_ram_8_ssd_240_fuente_real_500_aoc_24_144hz-2087726-800-600-1-75.jpg"
+                  alt="Computadora">
+                </div>
+                <div class="itemCarrito2">
+                    <h2> combo_gamer</h2>
+                 </div> <div class="itemCarrito3">
+                  <i class="fas fa-trash"></i>
+                 </div> <div class="itemCarrito4">
+                  <input id="number" type="number" value="42" />
 
-   <li><img class="foto"
-    src="/img/Hardware/Board Asrock B550m Hdv Amd Am4 Chipset B550 Pcie 4.0 Matx.jpg"
-    alt="tarjeta grafica"></li>
-    <li><img class="foto"
-        src="/img/Notebooks/Portátil Asus M3500QA-L1224 -Ryzen 7-5800H 16GB SSD 512GB 15,6 Oled.jpg"
-        alt="Computadora"></li>
-</ul>
+                 </div> <div class="itemCarrito5">
+                    <h2> valor productos</h2>
+                 </div>
+                
+</div>
+
+
+
+                        <div class="slider">
+
+<div class="sliderItem1">
+<img class="foto"
+                  src="/img/Notebooks/Asus_ROG_Strix_G15_gaming_laptop_AMD.jpg"
+                  alt="Computadora">
+</div>
+
+<div class="sliderItem2">
+   <img class="foto"
+                  src="/img/Notebooks/Asus_ROG_Strix_G15_gaming_laptop_AMD.jpg"
+                  alt="Computadora">
+
+</div>
+<!-- <div class="sliderItem3">
+
+   <img class="foto"
+   src="/img/Computadoras/combo_gamer_144hz_ryzen_3100_gtx_1650_super_ram_8_ssd_240_fuente_real_500_aoc_24_144hz-2087726-800-600-1-75.jpg"
+   alt="Computadora">
 </div> -->
-    <ul class="producto-en-carrito">
-        <li><img class="foto"
-                src="/img/Computadoras/imagen-combo_gamer_144hz_ryzen_3100_gtx_1650_super_ram_8_ssd_240_fuente_real_500_aoc_24_144hz-2087726-800-600-1-75.jpg"
-                alt="Computadora"></li>
-        <li><label for="cantidad"></label>
-            <input type="number" id="cantidad" name="cantidad" min="1" max="100">
-        </li>
-        <li><label for="subtotal"></label>
-            <input type="number" id="subtotal" name="subtotal">
-            <i class="fas fa-minus-circle"></i>
-        </li>
-    </ul>
 
-    <ul class="producto-en-carrito">
-        <li><img class="foto"
-                src="/img/Hardware/GIGABYTE GeForce RTX 3080 Turbo 10G Tarjeta gráfica GV-N3080TURBO-10GD-S (2X HDMI 2.1, 2X DisplayPort 1.4a, DirectX 12 Ultimate).jpg"
-                alt="tarjeta grafica"></li>
-        <li><label for="cantidad"></label>
-            <input type="number" id="cantidad" name="cantidad" min="1" max="100">
-        </li>
-        <li><label for="subtotal"></label>
-            <input type="number" id="subtotal" name="subtotal" min="9999999" max="">
-            <i class="fas fa-minus-circle"></i>
-        </li>
-    </ul>
 
-    <ul class="producto-en-carrito">
-        <li><img class="foto"
-                src="/img/Hardware/motherboard-gigabyte-b550m-ds3h-ac-wifi.jpg"
-                alt="tarjeta grafica"></li>
-        <li><label for="cantidad"></label>
-            <input type="number" id="cantidad" name="cantidad" min="1" max="100">
-        </li>
-        <li><label for="subtotal"></label>
-            <input type="number" id="subtotal" name="subtotal" min="1" max="">
-            <i class="fas fa-minus-circle"></i>
-        </li>
-    </ul>
+                        </div>
 
-</div>
-<div>
+                      
+
+                </div>
+
+            </section>
+
+<section>
+<div class="resumen">
 <h2>Resumen</h2>
+<div class="continuar-compra">
+   <label for="confirmar-compra" class="form-label">Total de la compra</label>
+						<input type="button" id="confirmar-compra" name="confirmar-compra" >
 </div>
-<div>
-    cantidad de productos y precio
+<div class="cantidad-productos"></div>
+<div class="total"> </div>
 </div>
-<div>
-    TOTAL
-        
-</div>
+</section>
+            </body>
 
-</main>
-<%- include('./partials/footer') %>
+        </main>
+        <%- include('./partials/footer') %>
