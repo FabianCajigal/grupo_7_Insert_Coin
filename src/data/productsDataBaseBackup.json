@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "nombre": "Combo Gamer",
+        "precio": 10000,
+        "discount": 50,
+        "categoria": "Computadoras",
+        "descripcion": "[144hz Ryzen 3100 gtx 1650 super; RAM 8 ssd 240 fuente real 500 aoc]",
+        "imagen": "combo_gamer_144hz_ryzen_3100_gtx_1650_super_ram_8_ssd_240_fuente_real_500_aoc_24_144hz-2087726-800-600-1-75.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Board Asrock B550m Hdv Amd Am4 Chipset B550 Pcie 4.0 Matx",
+        "precio": 8000,
+        "discount": 50,
+        "categoria": "Hardware",
+        "descripcion": "[Soporta Socket AMD AM4 Ryzen™ 3000, 3000 G-Series, 4000 G-Series, 5000 y 5000 G-Series Desktop Processors; Diseño de fase de alimentación 6; Soporta memoria DDR4 4733+ (OC); 1 PCIe 4.0 x16, 1 PCIe 3.0 x1; Opciones de salida gráficos: HDMI, DVI-D, D-Sub; Audio 7.1 canales HD (Realtek ALC887/897 Audio Codec); 4 SATA3, 1 Hyper M.2 (PCIe Gen4 x4 & SATA3); 6 USB 3.2 Gen1 (2 Frontales, 4 Traseros); Gigabit LAN]",
+        "imagen": "Board Asrock B550m Hdv Amd Am4 Chipset B550 Pcie 4.0 Matx.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "GIGABYTE GeForce RTX 3080 Turbo",
+        "precio": 100000,
+        "discount": 75,
+        "categoria": "Hardware",
+        "descripcion": "[10G Tarjeta gráfica GV-N3080TURBO-10GD-S; 2X HDMI 2.1, 2X DisplayPort 1.4a; DirectX 12 Ultimate]",
+        "imagen": "GIGABYTE GeForce RTX 3080 Turbo 10G Tarjeta gráfica GV-N3080TURBO-10GD-S (2X HDMI 2.1, 2X DisplayPort 1.4a, DirectX 12 Ultimate).jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "motherboard-gigabyte-b550m-ds3h-ac-wifi",
+        "precio": 120000,
+        "discount": 75,
+        "categoria": "Hardware",
+        "descripcion": "[Supports AMD Ryzen™ 5000 Series/ Ryzen™ 5000 G-Series/ Ryzen™ 4000 G-Series and Ryzen™ 3000 Series Processors; Dual Channel ECC/ Non-ECC Unbuffered DDR4, 4 DIMMs; 5+3 Phases Pure Digital VRM Solution with Low RDS(on) MOSFETs; Ultra Durable™ PCIe 4.0 Ready x16 Slot; Dual Ultra-Fast NVMe PCIe 4.0/3.0 M.2 Connectors; Onboard Intel® Dual Band 802.11ac Wireless & BT 4.2 with WIFI Antenna; High Quality Audio Capacitors and Audio Noise Guard for Ultimate Audio Quality; Realtek GbE LAN with Bandwidth Management; Rear HDMI & DVI Support; RGB FUSION 2.0 Supports Addressable LED & RGB LED Strips; Smart Fan 5 Features Multiple Temperature Sensors , Hybrid Fan Headers with FAN STOP; Q-Flash Plus Update BIOS without Installing the CPU, Memory and Graphics Card; Anti-Sulfur Resistors Design]",
+        "imagen": "motherboard-gigabyte-b550m-ds3h-ac-wifi.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "ASUS ROG Zephyrus G14",
+        "precio": 100000,
+        "discount": 55,
+        "categoria": "Notebooks",
+        "descripcion": "[Procesador hasta AMD Ryzen™ 7 4800HS ; Gráficos NVIDIA® GeForce® GTX 1650 Ti ; 14-inch, FHD (1920 x 1080) 16:9 IPS-level; 8GB DDR4-3200 SO-DIMM]",
+        "imagen": "ASUS ROG Zephyrus G14.jpg"
+    },
+{
+    "id": 6,
+        "nombre": "Asus_ROG_Strix_G15_gaming_laptop_AMD",
+        "precio": 100000,
+        "discount": 80,
+        "categoria": "Notebooks",
+        "descripcion": "[AMD Ryzen™ 7 6800H/HS Mobile  ; Gráficos NVIDIA® GeForce RTX™ 3050 ; 15.6 pulgadas FHD (1920 x 1080) 16:9, Nivel IPS; 8GB DDR4-3200 SO-DIMM]",
+        "imagen": "Asus_ROG_Strix_G15_gaming_laptop_AMD.jpg"
+    }
+]
