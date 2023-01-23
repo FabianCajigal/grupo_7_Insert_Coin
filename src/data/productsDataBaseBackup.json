@@ -1,56 +1,296 @@
 [
     {
         "id": 1,
-        "nombre": "Combo Gamer",
-        "precio": 10000,
-        "discount": 50,
-        "categoria": "Computadoras",
-        "descripcion": "[144hz Ryzen 3100 gtx 1650 super; RAM 8 ssd 240 fuente real 500 aoc]",
+        "name": "Combo Gamer",
+        "shortDescription": "monitor, torre y perifericos",
+        "price": 10000,
+        "longDescription": [
+            "144hz Ryzen 3100 gtx 1650 super",
+            "RAM 8 ssd 240 fuente real 500 aoc"
+        ],
+        "category": "computadoras",
+        "news": "true",
         "imagen": "combo_gamer_144hz_ryzen_3100_gtx_1650_super_ram_8_ssd_240_fuente_real_500_aoc_24_144hz-2087726-800-600-1-75.jpg"
     },
     {
         "id": 2,
-        "nombre": "Board Asrock B550m Hdv Amd Am4 Chipset B550 Pcie 4.0 Matx",
-        "precio": 8000,
-        "discount": 50,
-        "categoria": "Hardware",
-        "descripcion": "[Soporta Socket AMD AM4 Ryzen™ 3000, 3000 G-Series, 4000 G-Series, 5000 y 5000 G-Series Desktop Processors; Diseño de fase de alimentación 6; Soporta memoria DDR4 4733+ (OC); 1 PCIe 4.0 x16, 1 PCIe 3.0 x1; Opciones de salida gráficos: HDMI, DVI-D, D-Sub; Audio 7.1 canales HD (Realtek ALC887/897 Audio Codec); 4 SATA3, 1 Hyper M.2 (PCIe Gen4 x4 & SATA3); 6 USB 3.2 Gen1 (2 Frontales, 4 Traseros); Gigabit LAN]",
-        "imagen": "Board Asrock B550m Hdv Amd Am4 Chipset B550 Pcie 4.0 Matx.jpg"
+        "name": "Board Asrock B550m x",
+        "shortDescription": "Hdv Amd Am4 Chipset B550 Pcie 4.0 Mat",
+        "price": 8000,
+        "longDescription": [
+            "Soporta Socket AMD AM4 Ryzen™ 3000, 3000 G-Series, 4000 G-Series, 5000 y 5000 G-Series Desktop Processors",
+            "Diseño de fase de alimentación 6",
+            "Soporta memoria DDR4 4733+ (OC)",
+            "1 PCIe 4.0 x16, 1 PCIe 3.0 x1",
+            "Opciones de salida gráficos: HDMI, DVI-D, D-Sub",
+            "Audio 7.1 canales HD (Realtek ALC887/897 Audio Codec)",
+            "4 SATA3, 1 Hyper M.2 (PCIe Gen4 x4 & SATA3)",
+            "6 USB 3.2 Gen1 (2 Frontales, 4 Traseros)",
+            "Gigabit LAN"
+        ],
+        "category": "hardware",
+        "news": false,
+        "image": "Board Asrock B550m Hdv Amd Am4 Chipset B550 Pcie 4.0 Matx.jpg"
     },
     {
         "id": 3,
-        "nombre": "GIGABYTE GeForce RTX 3080 Turbo",
-        "precio": 100000,
-        "discount": 75,
-        "categoria": "Hardware",
-        "descripcion": "[10G Tarjeta gráfica GV-N3080TURBO-10GD-S; 2X HDMI 2.1, 2X DisplayPort 1.4a; DirectX 12 Ultimate]",
-        "imagen": "GIGABYTE GeForce RTX 3080 Turbo 10G Tarjeta gráfica GV-N3080TURBO-10GD-S (2X HDMI 2.1, 2X DisplayPort 1.4a, DirectX 12 Ultimate).jpg"
+        "name": "GIGABYTE GeForce ",
+        "shortDescription": "RTX 3080 Turbo",
+        "price": 100000,
+        "longDescription": [
+            "10G Tarjeta gráfica GV-N3080TURBO-10GD-S",
+            "2X HDMI 2.1, 2X DisplayPort 1.4a",
+            "DirectX 12 Ultimate"
+        ],
+        "category": "hardware",
+        "news": false,
+        "image": "GIGABYTE GeForce RTX 3080 Turbo 10G Tarjeta gráfica GV-N3080TURBO-10GD-S (2X HDMI 2.1, 2X DisplayPort 1.4a, DirectX 12 Ultimate).jpg"
     },
     {
         "id": 4,
-        "nombre": "motherboard-gigabyte-b550m-ds3h-ac-wifi",
-        "precio": 120000,
-        "discount": 75,
-        "categoria": "Hardware",
-        "descripcion": "[Supports AMD Ryzen™ 5000 Series/ Ryzen™ 5000 G-Series/ Ryzen™ 4000 G-Series and Ryzen™ 3000 Series Processors; Dual Channel ECC/ Non-ECC Unbuffered DDR4, 4 DIMMs; 5+3 Phases Pure Digital VRM Solution with Low RDS(on) MOSFETs; Ultra Durable™ PCIe 4.0 Ready x16 Slot; Dual Ultra-Fast NVMe PCIe 4.0/3.0 M.2 Connectors; Onboard Intel® Dual Band 802.11ac Wireless & BT 4.2 with WIFI Antenna; High Quality Audio Capacitors and Audio Noise Guard for Ultimate Audio Quality; Realtek GbE LAN with Bandwidth Management; Rear HDMI & DVI Support; RGB FUSION 2.0 Supports Addressable LED & RGB LED Strips; Smart Fan 5 Features Multiple Temperature Sensors , Hybrid Fan Headers with FAN STOP; Q-Flash Plus Update BIOS without Installing the CPU, Memory and Graphics Card; Anti-Sulfur Resistors Design]",
-        "imagen": "motherboard-gigabyte-b550m-ds3h-ac-wifi.jpg"
+        "name": "motherboard gigabyte",
+        "shortDescription": "b550m-ds3h-ac-wif",
+        "price": 120000,
+        "longDescription": [
+            "Supports AMD Ryzen™ 5000 Series/ Ryzen™ 5000 G-Series/ Ryzen™ 4000 G-Series and Ryzen™ 3000 Series Processors",
+            "Dual Channel ECC/ Non-ECC Unbuffered DDR4, 4 DIMMs",
+            "5+3 Phases Pure Digital VRM Solution with Low RDS(on) MOSFETs",
+            "Ultra Durable™ PCIe 4.0 Ready x16 Slot",
+            "Dual Ultra-Fast NVMe PCIe 4.0/3.0 M.2 Connectors",
+            "Onboard Intel® Dual Band 802.11ac Wireless & BT 4.2 with WIFI Antenna",
+            "High Quality Audio Capacitors and Audio Noise Guard for Ultimate Audio Quality",
+            "Realtek GbE LAN with Bandwidth Management",
+            "Rear HDMI & DVI Support",
+            "RGB FUSION 2.0 Supports Addressable LED & RGB LED Strips",
+            "Smart Fan 5 Features Multiple Temperature Sensors , Hybrid Fan Headers with FAN STOP",
+            "Q-Flash Plus Update BIOS without Installing the CPU, Memory and Graphics Card",
+            "Anti-Sulfur Resistors Design"
+        ],
+        "category": "hardware",
+        "news": "true",
+        "image": "motherboard-gigabyte-b550m-ds3h-ac-wifi.jpg"
     },
     {
         "id": 5,
-        "nombre": "ASUS ROG Zephyrus G14",
-        "precio": 100000,
-        "discount": 55,
-        "categoria": "Notebooks",
-        "descripcion": "[Procesador hasta AMD Ryzen™ 7 4800HS ; Gráficos NVIDIA® GeForce® GTX 1650 Ti ; 14-inch, FHD (1920 x 1080) 16:9 IPS-level; 8GB DDR4-3200 SO-DIMM]",
-        "imagen": "ASUS ROG Zephyrus G14.jpg"
+        "name": "ASUS ROG",
+        "shortDescription": "Zephyrus G14",
+        "price": 100000,
+        "longDescription": [
+            "Procesador hasta AMD Ryzen™ 7 4800HS",
+            "Gráficos NVIDIA® GeForce® GTX 1650 Ti",
+            "14-inch, FHD (1920 x 1080) 16:9 IPS-level",
+            "8GB DDR4-3200 SO-DIMM"
+        ],
+        "category": "notebooks",
+        "news": false,
+        "image": "ASUS ROG Zephyrus G14.jpg"
     },
-{
-    "id": 6,
-        "nombre": "Asus_ROG_Strix_G15_gaming_laptop_AMD",
-        "precio": 100000,
-        "discount": 80,
-        "categoria": "Notebooks",
-        "descripcion": "[AMD Ryzen™ 7 6800H/HS Mobile  ; Gráficos NVIDIA® GeForce RTX™ 3050 ; 15.6 pulgadas FHD (1920 x 1080) 16:9, Nivel IPS; 8GB DDR4-3200 SO-DIMM]",
-        "imagen": "Asus_ROG_Strix_G15_gaming_laptop_AMD.jpg"
+    {
+        "id": 6,
+        "name": "Asus_ROG_",
+        "shortDescription": "Strix G15 gaming laptop AMD",
+        "price": 100000,
+        "longDescription": [
+            "AMD Ryzen™ 7 6800H/HS Mobile",
+            "Gráficos NVIDIA® GeForce RTX™ 3050",
+            "15.6 pulgadas FHD (1920 x 1080) 16:9, Nivel IPS",
+            "8GB DDR4-3200 SO-DIMM"
+        ],
+        "category": "notebooks",
+        "news": false,
+        "image": "Asus_ROG_Strix_G15_gaming_laptop_AMD.jpg"
+    },
+    {
+        "id": 7,
+        "name": "MSI GL Series ",
+        "shortDescription": "GL65 Leopard negra 15.6OG_",
+        "price": 90000,
+        "longDescription": [
+            "Intel Core i7",
+            "10750H 16GB de RAM 1TB HDD 256GB SSD",
+            "NVIDIA GeForce RTX"
+        ],
+        "category": "notebooks",
+        "news": false,
+        "image": "MSI GL Series GL65 Leopard negra 15.6.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Portátil Asus ",
+        "shortDescription": "M3500QA-L1224 -Ryzen 7",
+        "price": 10000,
+        "longDescription": [
+            "AMD Ryzen 7-5800H",
+            "Memoria del Sistema Ram 16 GB",
+            "Velocidad del procesador 4.4 GHz",
+            "Disco Duro 512 GB"
+        ],
+        "category": "notebooks",
+        "news": true,
+        "image": "Portátil Asus M3500QA-L1224 -Ryzen 7-5800H 16GB SSD 512GB 15,6 Oled.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Halo Infinite",
+        "shortDescription": "periféricos Razer",
+        "price": 12000,
+        "longDescription": [
+            "siente la diferencia",
+            "switches mecánicos verdes razer",
+            "teclas de abs de doble inyección",
+            "estructura de aluminio",
+            "rueda digital multifunción y tecla multimedia",
+            "reposamuñecas ergonómico",
+            "opciones de enrutamiento de cable."
+        ],
+        "category": "perifericos",
+        "news": false,
+        "image": "Halo Infinite, periféricos Razer.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Halo Infinite",
+        "shortDescription": "periféricos Razer",
+        "price": 12000,
+        "longDescription": [
+            "siente la diferencia",
+            "switches mecánicos verdes razer",
+            "teclas de abs de doble inyección",
+            "estructura de aluminio",
+            "rueda digital multifunción y tecla multimedia",
+            "reposamuñecas ergonómico",
+            "opciones de enrutamiento de cable."
+        ],
+        "category": "perifericos",
+        "news": false,
+        "image": "Halo Infinite, periféricos Razer.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Bloodborne",
+        "shortDescription": "Juego PS4",
+        "price": 2000,
+        "longDescription": [
+            "Bloodborne nos lleva a la decrépita ciudad de Yharnam,",
+            "cuyos habitantes han sido infectados por una misteriosa enfermedad sanguínea.",
+            "Nosotros encarnamos al 'Cazador', un personaje que tendrá que buscar una misteriosa sustancia llamada Sangre pálida",
+            "mientras resuelve misterios y se enfrenta a todo tipo de criaturas"
+        ],
+        "category": "videojuegos",
+        "news": false,
+        "image": "Bloodborne.jpg"
+    },
+    {
+        "id": 12,
+        "name": "FarCry 6",
+        "shortDescription": "Juego XBOX",
+        "price": 2000,
+        "longDescription": [
+            "Far Cry 6 es un videojuego de disparos en primera persona desarrollado por Ubisoft Toronto y publicado por Ubisoft.",
+            "Es la sexta entrega principal de la serie Far Cry, fue lanzado el 7 de octubre del 2021 para las plataformas de Microsoft Windows,",
+            "PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S y Google Stadia."
+        ],
+        "category": "videojuegos",
+        "news": true,
+        "image": "FarCry 6.jpg"
+    },
+    {
+        "id": 13,
+        "name": "Xbox-One-S",
+        "shortDescription": "Microsoft-Xbox-One-S",
+        "price": 12000,
+        "longDescription": [
+            "Blu-ray 4K Reproduce películas en una asombrosa calidad 4K Ultra HD Blu-rayTM.2",
+            "Sonido espacial Da vida a tus juegos con un audio envolvente a través de Dolby Atmos, DTS:X y Windows Sonic.3",
+            "Aplicaciones de entretenimiento interminables Disfruta de tus apps favoritas, como Spotify, Disney+, HBO Max y muchas más.4"
+        ],
+        "category": "consolas",
+        "news": false,
+        "image": "Microsoft-Xbox-One-S.jpg"
+    },
+    {
+        "id": 14,
+        "name": "Monster Hunter World",
+        "shortDescription": "Juego XBOX ONE",
+        "price": 2000,
+        "longDescription": [
+            "Monster Hunter World es un RPG de acción en el que, como su nombre indica,",
+            "el objetivo principal es cazar una serie de monstruos de todos tamaños mientras disfrutas una campaña",
+            "que puedes jugar en solitario o en grupos hasta de 4 jugadores."
+        ],
+        "category": "videojuegos",
+        "news": false,
+        "image": "Monster Hunter World.jpg"
+    },
+    {
+        "id": 15,
+        "name": "PS4",
+        "shortDescription": "Sony Play Station 4",
+        "price": 12000,
+        "longDescription": [
+            "PS4 es un sistema de entretenimiento digital y la cuarta consola de sobremesa desarrollada por Sony Computer Entertainment.",
+            "Cuenta con un procesador APU de ocho núcleos x86-64 Jaguar desarrollado por AMD.",
+            "La GPU también fabricada por AMD Radeon tiene una potencia de procesamiento de 1,84 Teraflops."
+        ],
+        "category": "consolas",
+        "news": false,
+        "image": "PS4.jpg"
+    },
+    {
+        "id": 16,
+        "name": "PS5",
+        "shortDescription": "Sony Play Station 5",
+        "price": 12000,
+        "longDescription": [
+            "Frecuencia variable de GPU hasta 2.23 GHz (10.3 TFLOPS). Memoria GDDR6 16 GB con ancho de banda de 448 GB/s.",
+            "Unidad de almacenamiento SSD 825 GB.",
+            "Ancho de banda de lectura 5.5 GB/s (datos puros) y 9 GB/s (datos comprimidos)"
+        ],
+        "category": "consolas",
+        "news": true,
+        "image": "PS5.jpg"
+    },
+    {
+        "id": 17,
+        "name": "Xbox Series X",
+        "shortDescription": "Microsoft Xbox Series X",
+        "price": 12000,
+        "longDescription": [
+            "Procesador de 8 núcleos a 3,8 GHz personalizado con microarquitectura AMD Zen 2 y fotolitografía de 7 nm",
+            "Procesador gráfico personalizado con 52 unidades de cálculo a 1,825 GHz, microarquitectura AMD RDNA 2 y 12 TFLOPS",
+            "16 GB GDDR6 con bus de 320 bits",
+            "1 x HDMI 2.1, 3 x USB 3.1 Gen 1, 1 x Gigabit Ethernet y ranura para tarjetas de expansión Seagate de 1 TB"
+        ],
+        "category": "consolas",
+        "news": true,
+        "image": "Xbox Series X.jpg"
+    },
+    {
+        "id": 18,
+        "name": "Spider-man",
+        "shortDescription": "Juego PS4",
+        "price": 2000,
+        "longDescription": [
+            "Explora un capítulo del universo de Marvel’s Spider-Man en la piel de un curtido Peter Parker.",
+            "Spider-Man presenta las habilidades acrobáticas, la improvisación y las telarañas",
+            "Vive con Spider-Man desde el parkour hasta las interacciones según el entorno."
+        ],
+        "category": "videojuegos",
+        "news": false,
+        "image": "Spider-man.jpg"
+    },
+    {
+        "id": 19,
+        "name": "Resident Evil 2",
+        "shortDescription": "Juego PS4",
+        "price": 2000,
+        "longDescription": [
+            "Resident Evil 2 Remake es la puesta al día del clásico original del género survival horror para PS4,",
+            "que coincide con el vigésimo aniversario de la saga Resident Evil.",
+            "Supone un cambio de perspectiva jugable, de estilo de juego y de ambientación"
+        ],
+        "category": "videojuegos",
+        "news": false,
+        "image": "Resident Evil 2.jpg"
     }
 ]
