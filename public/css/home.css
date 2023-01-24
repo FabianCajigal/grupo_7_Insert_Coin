@@ -125,29 +125,19 @@
 
 /* ////////////////////// */
 
-main{
-  
-    width: 90%;
-    margin-left: 5%;
-    text-align: center;
-}
 .titulares{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
- 
+   
 }
 .item{
     margin: auto;
     width: 80%;
+  
+    margin-bottom: 10px;
 }
-/* .foto{
-    background-color:#ebebeb;
-    display:block;
-    margin:auto;
-    
-} */
 .descripción{
     border-top: 1px solid var(--Gris-claro) ;
     margin: 15px;
@@ -156,100 +146,59 @@ main{
     margin-top: 10px;
     display:none;
 }
-
 article{
     margin-bottom: 10px;  
 }
-
-.titulares{
-    font-size: 24px;
-}
 .precio{
     font-size: 18px;
-}
-.descuento, .ofertas, .personal{
-    font-size: 16px;
-}
-
-.copy{
     text-align: center;
-
 }
+
 
 /*------------------------Media queries------------------------*/
 
 /*------------------------TABLET------------------------*/
-@media (min-width: 480px){
-    .menu-superior{
-        display: flex;
-        justify-content: space-between;
-    }
-.menu {
-    display: none;
-}
-.navegacion-header {
-    display:flex;
-    /* justify-content: space-between; */
-    margin-left: 10px;
-    margin-right: 10px;
-}
+@media (min-width: 600px){
 
-.ofertas, .personal {
-    display:inline-flex;
-    justify-content: space-between;
-    margin-left: 10px;
-    margin-right: 10px;
-
-    
-}
 .item{
     
         width: 40%;
+        margin: 10px;
     
 }
 .nombre-producto{
     display: block;
+    text-align: center;
 }
-/* .foto{
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-} */
-.texto-footer{
-    display: block;
+.foto {
+    width: 100%;
+    max-height: 200px;
 }
-
 }
 /* ------------- COMPUTADORA ------------- */
-@media (min-width: 769px){
-    /* .foto{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    } */
-    .menu  {
-       display: none;
-    }
-    .navegacion-header {
+@media (min-width: 860px){
+ 
+
+    .titulares{
         display: flex;
-        justify-content: space-between;
-        margin-left: 10px;
-        margin-right: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+       
     }
-    
-    .ofertas, .personal {
-        display:inline-flex;
-        justify-content: space-between;
-        margin-left: 10px;
-        margin-right: 10px;
-        
-    }
+  
     .item{
-    
         width: 20%;
-    
+        
 }
   
-    .nombre-producto{
+    .nombre-producto, .precio, .descripcionCorta{
         display:block;
+        text-align: center;
     }
-    .texto-footer{
-        display:block
+  
+    .foto {
+        width: 100%;
+        max-height: 200px;
     }
 }
