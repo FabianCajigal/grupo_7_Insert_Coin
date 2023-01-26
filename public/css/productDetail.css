@@ -30,7 +30,10 @@ main h2{
     font-weight: bold;
     max-width: 100%;
 }
-
+.detalle{
+    margin-left: 20px;
+    
+}
 /*------------------------ MEDIA QUERIES ------------------------*/
 
 @media (min-width: 860px) {

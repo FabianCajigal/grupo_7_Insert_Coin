@@ -5,22 +5,22 @@
 <main>
     <article class="articulo">
         <div><img src = "/img/products/<%= product.image %>" class="imagen"></div>
-        <div><h2><%= product.name %></h2>
+        <div class="detalle"><h2><%= product.name %></h2>
         <p><%= product.shortDescription %></p>
             <h3>$<%= product.price %></h3>
             <p><i class="fas fa-credit-card"></i> 12 Cuotas sin interés</p>
             <div class="descripcion"><h3>Descripción</h3>
-            <ul class="lista-detalle">
+                <ul class="lista-detalle">
                 <% for(let i=0; i < product.longDescription.length; i++) {%>
                     <li><%= product.longDescription[i] %></li>
                 <% } %>
-            </ul></div>
+                </ul></div>
         </div>  
         <a href="/products/<%= product.id %>/edit">
-            <button type="button">EDITAR PRODUCTO</button> 
+            <button style="background-color: var(--azul); margin-bottom: 10px; margin-top: 10px; border-radius: 5%;margin-left: 10px;" type="button">EDITAR PRODUCTO</button> 
         </a>
         <form action="/products/<%= product.id %>?_method=DELETE" method="post">
-            <button type="submit">ELIMINAR PRODUCTO</button> 
+            <button style="background-color: red; margin-bottom: 10px; margin-top: 10px; border-radius: 5%; margin-left: 10px;" type="submit">ELIMINAR PRODUCTO</button> 
         </form>
     </article>    
     

@@ -4,7 +4,6 @@
 
 <main>
     <div class="Carrousel">
-        Carrousel
         <div class="slide">
             <div class="slide-inner">
                 <input class="slide-open" type="radio" id="slide-1" 
@@ -45,24 +44,24 @@
     </div>
 
     
-    <h2 class="titulo"> Los mejores productos </h2>
+    <h2 class="titulo"> ULTIMAS NOVEDADES </h2>
     <section class="titulares">
         <% products.forEach(product => { %>
         <article class="item">
            <a href="/products/<%= product.id %> ">
            
             <div> <img class="foto" src="\img\products\<%= product.image %> " alt="Imagen de producto"></div>
-            <div>
-            <h2 class="descripcionCorta"> <%= product.shortDescription %> 
-                <h3 class="precio">$<%= product.price %></h3>
-                <h3 class="nombre-producto"><%= product.name %> </h3>
-            </div>
+                <div>
+                    <h2 class="precio">$<%= product.price %></h2>
+                    <h2 class="nombre-producto"><%= product.name %> </h2>
+                    <h3 class="descripcion"> <%= product.shortDescription %> </h3>
+                </div>
         </article>
     </a>
         <% }) %>
 
     </section>
-    <div style="margin:auto;width:50%;padding-block:10%;text-align:center">
+    <!-- <div style="margin:auto;width:50%;padding-block:10%;text-align:center">
         <h2>Links a las vistas (para testing):</h2>
         <ul>
             <li style="margin-bottom:10px;margin-top:10px"><a href="/login">LOGIN</a></li>
@@ -73,7 +72,13 @@
             <li style="margin-bottom:10px"><a href="/products/create">FORMULARIO DE CREACION</a></li>
             <li style="margin-bottom:10px"><a href="/products/edit">FORMULARIO DE EDICION</a></li>
         </ul>
-    </div>
+    </div> -->
+    <div class="button-prducts" style="text-align: center;">
+     <a href="/products">
+        <button  style="background-color: var(--azul); margin-bottom: 50px; margin-top: 50px; padding: 14px 28px; border-radius: 5%;"> TODOS LOS PRODUCTOS</button> 
+        </a></div>
+    </a>
+
 </main>
 
 <%- include('./partials/footer') %>

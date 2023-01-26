@@ -3,91 +3,76 @@
 @import url(footer.css);
 
 
-main {
-
-    text-align: center;
-}
-
-.titulares {
+.titulares{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 5px;
-
+    justify-content: space-between;
+   
 }
-
-.item {
+.item{
     margin: auto;
     width: 80%;
-
-}
-
-.foto {
-    background-color: #ebebeb;
-    display: block;
-    margin: auto;
-
-}
-
-.descripcion {
-    border-top: 1px solid var(--Gris-claro);
-    margin: 15px;
-}
-
-.nombre-producto {
-    margin-top: 10px;
-    display: none;
-}
-
-article {
+  
     margin-bottom: 10px;
 }
-
-.titulares {
-    font-size: 24px;
+.nombre-producto, .precio, .descripcion, .titulo{
+    display:block;
+    text-align: center;
 }
 
-.precio {
-    font-size: 18px;
-}
 
+article{
+    margin-bottom: 10px;  
+}
 
 
 /*------------------------Media queries------------------------*/
 
 /*------------------------TABLET------------------------*/
-@media (min-width: 480px) {
+@media (min-width: 600px){
 
-
-    .item {
-
+.item{
+    
         width: 40%;
-
-    }
-
-    .nombre-producto {
-        display: block;
-    }
-
-    /* .foto{
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-} */
-
+        margin: 10px;
+    
 }
-
+.nombre-producto, .precio, .descripcion{
+    display:block;
+    text-align: center;
+}
+.foto {
+    width: 100%;
+    max-height: 200px;
+    aspect-ratio: 1/1;
+}
+}
 /* ------------- COMPUTADORA ------------- */
-@media (min-width: 769px) {
-    /* .foto{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    } */
+@media (min-width: 860px){
+ 
 
-    .item {
+    .titulares{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+       
+    }
+  
+    .item{
         width: 20%;
+        
+}
+  
+    .nombre-producto, .precio, .descripcion{
+        display:block;
+        text-align: center;
     }
-
-    .nombre-producto {
-        display: block;
+  
+    .foto {
+        width: 100%;
+        max-height: 200px;
+        aspect-ratio: 1/1;
     }
-
 }

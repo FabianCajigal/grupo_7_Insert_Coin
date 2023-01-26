@@ -8,12 +8,13 @@
     <section class="titulares">
 
         <% for (let i = 0; i < products.length; i++) { %>
-            <a href="/products/<%= products[i].id %>">
+           
                 <article class="item">
+ 	            <a href="/products/<%= products[i].id %>">
                     <div> <img class="foto" src="/img/products/<%= products[i].image %>">
-                        <p class="precio">$<%= products[i].price %></p>
-                        <p class="nombre-producto"><%= products[i].name %></p>
-                        <p class="descripcion"><%= products[i].shortDescription %></p>
+                        <h2 class="precio">$<%= products[i].price %></h2>
+                        <h2 class="nombre-producto"><%= products[i].name %></h2>
+                        <h3 class="descripcion"><%= products[i].shortDescription %></h3>
                     </div>
                 </article>
             </a> 

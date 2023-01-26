@@ -2,6 +2,7 @@
 @import url(header.css);
 @import url(footer.css);
 
+
 /* Carrousel */
 .Carrousel{
     margin-bottom: 30px;
@@ -125,6 +126,7 @@
 
 /* ////////////////////// */
 
+
 .titulares{
     display: flex;
     flex-direction: row;
@@ -132,26 +134,20 @@
     justify-content: space-between;
    
 }
+.nombre-producto, .precio, .descripcion{
+    display:block;
+    text-align: center;
+}
 .item{
     margin: auto;
     width: 80%;
   
     margin-bottom: 10px;
 }
-.descripción{
-    border-top: 1px solid var(--Gris-claro) ;
-    margin: 15px;
-}
-.nombre-producto{
-    margin-top: 10px;
-    display:none;
-}
+
+
 article{
     margin-bottom: 10px;  
-}
-.precio{
-    font-size: 18px;
-    text-align: center;
 }
 
 
@@ -166,8 +162,8 @@ article{
         margin: 10px;
     
 }
-.nombre-producto{
-    display: block;
+.nombre-producto, .precio, .descripcion{
+    display:block;
     text-align: center;
 }
 .foto {
@@ -178,6 +174,9 @@ article{
 /* ------------- COMPUTADORA ------------- */
 @media (min-width: 860px){
  
+   .titulo{
+    text-align: center;
+   }
 
     .titulares{
         display: flex;
@@ -192,7 +191,7 @@ article{
         
 }
   
-    .nombre-producto, .precio, .descripcionCorta{
+    .nombre-producto, .precio, .descripcion{
         display:block;
         text-align: center;
     }
@@ -201,4 +200,5 @@ article{
         width: 100%;
         max-height: 200px;
     }
+    
 }

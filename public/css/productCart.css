@@ -22,7 +22,7 @@
 .resumen{
     width: 60%;
 
-background-color: darkgreen;
+
 }
 /*------------------------ MEDIA QUERIES ------------------------*/
 /*------------------------TABLET------------------------*/
@@ -73,7 +73,7 @@ background-color: darkolivegreen;
     width: 65%;
     height: 200px;
     margin: 41px;
-    /* background-color: yellowgreen */
+  
 }
 .slider{
     display: none;
