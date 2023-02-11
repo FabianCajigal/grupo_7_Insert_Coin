@@ -3,11 +3,6 @@
 @import url(footer.css);
 
 
-
-
-
-
-
 main {
     margin: auto;
     width: 90vw;
@@ -17,7 +12,6 @@ main {
 
 main section {
     margin-block: 10%;
-    margin-bottom: 165px;
 }
 
 main .title {

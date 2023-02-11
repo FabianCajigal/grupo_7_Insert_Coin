@@ -7,7 +7,7 @@ const users = require('../data/usersDataBase.json');
 const userController = {
     register: (req, res) => res.render('register'),
     login: (req, res) => {
-        res.render('login')
+        res.render('login');
     },
     authenticate: (req, res) => {
         const userToLogin = users.find(user => user.username == req.body.username);
@@ -37,6 +37,7 @@ const userController = {
     },
     logout: (req, res) => {
         req.session.destroy();
+        res.locals.user = null;
         res.redirect('/');
     }
 };
