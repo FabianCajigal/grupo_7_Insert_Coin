@@ -2,21 +2,50 @@
 @import url(header.css);
 @import url(footer.css);
 
+main {
+    margin: auto;
+    width: 90vw;
+    max-width: 1400px;
+    margin-block: 52px;
+}
+
 .articulo{
     width: 90%;
     margin: 10px;
     padding: 10px;
     display: inline-block;
 }
+
 .imagen{
 padding: 10px;
 max-width: 600px;
 }
+
 .descripcion{
     color: black;
     background-color: #F6EDEB;
     text-align: left;
     font-size: 17px;
+}
+
+.buttons {
+    margin-top: 22px;
+}
+
+main button {
+    width: 100%;
+    margin-top: 12px;
+    padding: 8px;
+    border: 1px var(--gris) solid;
+    border-radius: 8px;
+    background-color: var(--azul);
+    color: var(--blanco);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.delete {
+    background-color: red;
 }
 
 .lista-detalle li{
@@ -39,6 +68,7 @@ main h2{
 @media (min-width: 860px) {
     .articulo { 
         display: flex;
+        justify-content: center;
     }
 
 }

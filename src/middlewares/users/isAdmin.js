@@ -3,7 +3,7 @@ function isAdmin (req, res, next) {
         next();
     }
     else {
-        res.redirect('/');
+        res.send('Unauthorized');
     }
 }
 

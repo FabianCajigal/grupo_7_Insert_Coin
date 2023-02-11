@@ -10,10 +10,13 @@ const userController = {
         res.render('login')
     },
     authenticate: (req, res) => {
-        const user = users.find(user => user.username == req.body.username);
-        if (user && user.password == req.body.password) {
-            delete user.password;
-            req.session.user = user;
+        const userToLogin = users.find(user => user.username == req.body.username);
+        if (userToLogin && userToLogin.password == req.body.password) {
+            req.session.user = { 
+                id: userToLogin.id,
+                username: userToLogin.username,
+                category: userToLogin.category
+            };
             res.redirect('/');
         }
         else {
@@ -21,12 +24,19 @@ const userController = {
         }
     },
     profile: (req, res) => res.render('profile'),
-    edit: (req, res) => res.render('userEdit'),
+    edit: (req, res) => {
+        const userToEdit = users.find(user => user.id == req.session.user.id);
+        res.render('userEdit', { user: userToEdit });
+    },
     update: (req, res) => {
         res.send('ok');
     },
-    passwordChange: (req, res) => res.render('passwordChange'),
+    passwordChange: (req, res) => {
+        const userToEdit = users.find(user => user.id == req.session.user.id);
+        res.render('passwordChange', { user: userToEdit });
+    },
     logout: (req, res) => {
+        req.session.destroy();
         res.redirect('/');
     }
 };

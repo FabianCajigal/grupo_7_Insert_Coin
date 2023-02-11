@@ -7,17 +7,17 @@
         <div class="slide">
             <div class="slide-inner">
                 <input class="slide-open" type="radio" id="slide-1" 
-                      name="slide" aria-hidden="true" hidden="" checked="checked">
+                    name="slide" aria-hidden="true" hidden="" checked="checked">
                 <div class="slide-item">
                     <img src="/img/products/PS4.jpg">
                 </div>
                 <input class="slide-open" type="radio" id="slide-2" 
-                      name="slide" aria-hidden="true" hidden="">
+                    name="slide" aria-hidden="true" hidden="">
                 <div class="slide-item">
                     <img src="/img/products/Portátil Asus M3500QA-L1224 -Ryzen 7-5800H 16GB SSD 512GB 15,6 Oled.jpg">
                 </div>
                 <input class="slide-open" type="radio" id="slide-3" 
-                      name="slide" aria-hidden="true" hidden="">
+                    name="slide" aria-hidden="true" hidden="">
                 <div class="slide-item">
                     <img src="/img/products/Board Asrock B550m Hdv Amd Am4 Chipset B550 Pcie 4.0 Matx.jpg">
                 </div>
@@ -48,36 +48,26 @@
     <section class="titulares">
         <% products.forEach(product => { %>
         <article class="item">
-           <a href="/products/<%= product.id %> ">
-           
-            <div> <img class="foto" src="\img\products\<%= product.image %> " alt="Imagen de producto"></div>
+            <a href="/products/<%= product.id %>">
+                <div> 
+                    <img class="foto" src="\img\products\<%= product.image %>" alt="Imagen de producto">
+                </div>
                 <div>
                     <h2 class="precio">$<%= product.price %></h2>
-                    <h2 class="nombre-producto"><%= product.name %> </h2>
-                    <h3 class="descripcion"> <%= product.shortDescription %> </h3>
+                    <h2 class="nombre-producto"><%= product.name %></h2>
+                    <h3 class="descripcion"><%= product.shortDescription %></h3>
                 </div>
+            </a>
         </article>
-    </a>
         <% }) %>
 
+        <div class="button-products" style="text-align: center;">
+            <a href="/products">
+                <button class="all-products">TODOS LOS PRODUCTOS</button> 
+            </a>
+        </div>
     </section>
-    <!-- <div style="margin:auto;width:50%;padding-block:10%;text-align:center">
-        <h2>Links a las vistas (para testing):</h2>
-        <ul>
-            <li style="margin-bottom:10px;margin-top:10px"><a href="/login">LOGIN</a></li>
-            <li style="margin-bottom:10px"><a href="/register">REGISTER</a></li>
-            <li style="margin-bottom:10px"><a href="/cart">CARRITO</a></li>
-            <li style="margin-bottom:10px"><a href="/products/detail">DETALLE</a></li>
-            <li style="margin-bottom:10px"><a href="/products">LISTA DE PRODUCTOS</a></li>
-            <li style="margin-bottom:10px"><a href="/products/create">FORMULARIO DE CREACION</a></li>
-            <li style="margin-bottom:10px"><a href="/products/edit">FORMULARIO DE EDICION</a></li>
-        </ul>
-    </div> -->
-    <div class="button-prducts" style="text-align: center;">
-     <a href="/products">
-        <button  style="background-color: var(--azul); margin-bottom: 50px; margin-top: 50px; padding: 14px 28px; border-radius: 5%;"> TODOS LOS PRODUCTOS</button> 
-        </a></div>
-    </a>
+    
 
 </main>
 

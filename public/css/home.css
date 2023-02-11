@@ -145,6 +145,24 @@
     margin-bottom: 10px;
 }
 
+.button-products {
+    margin-block: 32px;
+    width: 90%;
+    margin-inline: auto;
+}
+
+main button {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 12px;
+    padding: 8px;
+    border: 1px var(--gris) solid;
+    border-radius: 8px;
+    background-color: var(--azul);
+    color: var(--blanco);
+    cursor: pointer;
+    font-weight: bold;
+}
 
 article{
     margin-bottom: 10px;  
