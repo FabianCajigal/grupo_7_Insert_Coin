@@ -1,18 +1,34 @@
 [
-    {
-        "id": 1,
-        "email": "lautaro@mail.com",
-        "username": "lpatyn",
-        "category": "admin",
-        "password": "test123",
-        "image": "default-image.png"
-    },
-    {
-        "id": 2,
-        "email": "lautaro@mail.com",
-        "username": "test",
-        "category": "user",
-        "password": "test123",
-        "image": "default-image.png"
-    }
+ {
+  "id": 1,
+  "email": "lautaro@mail.com",
+  "username": "lpatyn",
+  "category": "admin",
+  "password": "test123",
+  "image": "default-image.png"
+ },
+ {
+  "id": 2,
+  "email": "lautaro@mail.com",
+  "username": "test",
+  "category": "user",
+  "password": "test123",
+  "image": "default-image.png"
+ },
+ {
+  "id": 3,
+  "email": "paupau201216@gmail.com",
+  "username": "Pau",
+  "category": "admin",
+  "password": "$2a$10$yovOYIrC8W/nbWW/iaSCu.Xw7UcIb2BrcxIP7jDEXbr5SdRIVumM.",
+  "image": "users-1676146567106.JPG"
+ },
+ {
+  "id": 4,
+  "email": "julio.acosta.cba@gmail.com",
+  "username": "Camilo",
+  "category": "admin",
+  "password": "$2a$10$nHlCe442JsTzqW.5n1h4ge17gBszmFIs9JnuBxCbwu06tihgJECyi",
+  "image": "default-image.png"
+ }
 ]

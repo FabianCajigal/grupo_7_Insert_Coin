@@ -3,15 +3,34 @@ const fs = require('fs');
 const path = require('path');
 const dataPath = path.resolve(__dirname, '../data/usersDatabase.json');
 const users = require('../data/usersDataBase.json');
+const bcrypt = require('bcryptjs');
 
 const userController = {
     register: (req, res) => res.render('register'),
+    store: (req,res) => {
+        const userToRegister = { 
+            id: users[users.length - 1].id + 1, 
+            email: req.body.email,
+            username: req.body.username, 
+            category: req.body.category,
+            password: bcrypt.hashSync(req.body.password, 10),
+            image: req.file ? req.file.filename : 'default-image.png' 
+        };
+        users.push(userToRegister);
+        fs.writeFileSync(dataPath, JSON.stringify (users, null, ' '));
+        req.session.user = { 
+            id: userToRegister.id,
+            username: userToRegister.username,
+            category: userToRegister.category
+        };
+        res.redirect('/');
+    },
     login: (req, res) => {
         res.render('login');
     },
     authenticate: (req, res) => {
         const userToLogin = users.find(user => user.username == req.body.username);
-        if (userToLogin && userToLogin.password == req.body.password) {
+        if (userToLogin && bcrypt.compareSync(req.body.password, userToLogin.password)) {
             req.session.user = { 
                 id: userToLogin.id,
                 username: userToLogin.username,
