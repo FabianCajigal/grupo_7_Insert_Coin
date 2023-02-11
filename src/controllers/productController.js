@@ -7,12 +7,12 @@ const products = require('../data/productsDataBase.json');
 const productController = {
     index: (req, res) => {
         const productsNews = products.filter(product => product.news == true);
-        res.render('home', { title: 'home', products: productsNews });
+        res.render('home', { products: productsNews });
     },
     list: (req, res) => {
         if (!req.query.category && !req.query.search) {
             const heading = 'Todos los productos';
-            res.render('productList', { title: 'productList', heading: heading, products: products });
+            res.render('productList', { heading: heading, products: products });
         }
 
         if (req.query.category) {
@@ -20,24 +20,24 @@ const productController = {
             category = category == 'Perifericos' ? 'Periféricos' : category;
             const heading = `Categoría: ${category}`;
             const list = products.filter(product => product.category == req.query.category);
-            res.render('productList', { title: 'productList', heading: heading, products: list });
+            res.render('productList', { heading: heading, products: list });
         }
         
         if (req.query.search) {
             const heading = `Resultados de búsqueda: "${req.query.search}"`;
             const list = products.filter(product => product.name.toLowerCase().includes(req.query.search.toLowerCase()));
-            res.render('productList', { title: 'productList', heading: heading, products: list });
+            res.render('productList', { heading: heading, products: list });
         }
     },
     detail: (req, res) => {
         const product = products.find(product => product.id == req.params.id);
-        res.render('productDetail', { title: 'productDetail', product: product });
+        res.render('productDetail', { product: product });
     },
     cart: (req, res) => {
-        res.render('productCart', { title: 'productCart' });
+        res.render('productCart');
     },
     create: (req, res) => {
-        res.render('productCreate', { title: 'productCreate' });
+        res.render('productCreate');
     },
     store: (req,res) => {
         const product = { 
@@ -56,7 +56,7 @@ const productController = {
     },
     edit: (req, res) => {
         const product = products.find(product => product.id == req.params.id);
-        res.render('productEdit', { title: 'productEdit', product: product });
+        res.render('productEdit', { product: product });
     },
     update: (req,res) => {
         const product = products.find(product => product.id == req.params.id);

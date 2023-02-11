@@ -1,4 +1,4 @@
-<%- include('./partials/head') %>
+<%- include('./partials/head', { stylesheet: "login" }) %>
 
 <%- include('./partials/header') %>
 
@@ -11,20 +11,20 @@
         </article>
 
         <article class="form">
-            <form action="/" method="post" class="create-form">             
+            <form action="/account/login" method="post" class="create-form">             
             <div>
                 <label for="username">Usuario</label>
-                <input type="text" name="username" id="username" class="control" placeholder="Indique su usuario">
+                <input type="text" name="username" id="username" class="control" placeholder="Indique su usuario" required>
             </div>
             <br>
             <div>
                 <label for="password">Contraseña</label>
-                <input type="password" name="password" id="password" class="control" placeholder="Indique su contraseña">
+                <input type="password" name="password" id="password" class="control" placeholder="Indique su contraseña" required>
             </div>
             <br>
                 <button type="submit" value="INGRESAR">INGRESAR</button>
             <br>         
-            <a href="/register"><button type="button" value="REGISTRATE">REGISTRARSE</button></a>
+            <a href="/account/register"><button type="button" value="REGISTRATE">REGISTRARSE</button></a>
             </form>
         </article>
 

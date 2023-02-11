@@ -1,0 +1,10 @@
+@import url(var.css);
+@import url(header.css);
+@import url(footer.css);
+
+
+main {
+    padding-block: 169px;
+    text-align: center;
+    font-size: 20px;
+}

@@ -30,9 +30,13 @@
                 </div>
 
                 <div class="account">
-                    <a href="/login">
+                    <a href="/account<% if(!user) { %>/login<% } %>">
                         <i class="fas fa-user-circle"></i>
-                        <span>Cuenta</span>
+                        <% if (user) { %> 
+                            <span><%=user.username%></span> 
+                        <% } else { %>
+                            <span>Ingresar</span>
+                        <% } %>
                     </a>
                 </div>
             </div>

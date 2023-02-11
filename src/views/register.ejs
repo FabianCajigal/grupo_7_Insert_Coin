@@ -1,4 +1,4 @@
-<%- include('./partials/head') %>
+<%- include('./partials/head', { stylesheet: "register" }) %>
 
 <%- include('./partials/header') %>
 
@@ -11,7 +11,7 @@
         </article>
 
         <article class="form">
-            <form action="/" method="post" class="create-form">
+            <form action="/account/register" method="post" class="create-form">
 
                 <div class="form-control">
                     <label for="email">Dirección de correo electrónico</label>

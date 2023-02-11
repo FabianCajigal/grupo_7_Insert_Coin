@@ -1,4 +1,4 @@
-<%- include('./partials/head') %>
+<%- include('./partials/head', { stylesheet: "userEdit" }) %>
 
 <%- include('./partials/header') %>
 
@@ -11,24 +11,24 @@
         </article>
 
         <article class="form">
-            <form action="/" method="post" class="create-form">
+            <form action="/account/edit?_method=PUT" method="post" class="create-form">
 
                 <div class="form-control">
                     <label for="email">Dirección de correo electrónico</label>
-                    <input type="email" name="email" id="email" class="control" required>
+                    <input type="email" name="email" id="email" class="control" value="<%= user.email %>" required>
                 </div>
 
                 <div class="form-control">
                     <label for="username">Usuario</label>
-                    <input type="text" name="username" id="username" class="control" required>
+                    <input type="text" name="username" id="username" class="control" value="<%= user.username %>" required>
                 </div>
 
                 <div class="form-control">
                     <label for="category">Categoría de usuario</label>
                     <select name="category" id="category" class="control" required>
                         <option disabled selected>Seleccionar...</option>
-                        <option value="admin">Administrador</option>
-                        <option value="user">Usuario</option>
+                        <option value="admin" <% if (user.category == 'admin') { %> selected <% } %> >Administrador</option>
+                        <option value="user" <% if (user.category == 'user') { %> selected <% } %> >Usuario</option>
                     </select>
                 </div>
                 

@@ -1,0 +1,22 @@
+<%- include('./partials/head', { stylesheet: "profile" }) %>
+
+<%- include('./partials/header') %>
+
+
+<main> 
+    <p>perfil del usuario</p>
+    <br>
+    <a href="/account/edit">
+        <button type="submit">Editar perfil</button>
+    </a>
+    <a href="/account/password-change">
+        <button type="submit">Cambiar contraseña</button>
+    </a>
+    <form action="/account/logout" method="post">
+        <button type="submit">Cerrar sesión</button>
+    </form>
+    
+</main>
+
+<%- include('./partials/footer') %>
+

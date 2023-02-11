@@ -1,12 +1,11 @@
 /*------------ Requires ------------*/
 const express = require('express');
 const router = express.Router();
-const userController = require('../controllers/userController');
 const productController = require('../controllers/productController');
+const isLogged = require('../middlewares/users/isLogged');
 
 router.get('/', productController.index);
-router.get('/cart', productController.cart);
-router.get('/login', userController.login);
-router.get('/register', userController.register);
+
+router.get('/cart', isLogged, productController.cart);
 
 module.exports = router;
