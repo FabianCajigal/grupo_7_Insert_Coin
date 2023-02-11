@@ -24,12 +24,13 @@ router.get('/register', isUnlogged, userController.register);
 router.post('/register', isUnlogged, upload.single('image'), userController.store);
 
 router.get('/login', isUnlogged, userController.login);
-router.post('/login', userController.authenticate);
+router.post('/login', isUnlogged, userController.authenticate);
 
 router.get('/edit', isLogged, userController.edit);
-router.put('/edit', isLogged, userController.update);
+router.put('/edit', isLogged, upload.single('image'), userController.update);
 
 router.get('/password-change', isLogged, userController.passwordChange);
+router.put('/password-change', isLogged, userController.passwordUpdate);
 
 router.post('/logout', isLogged, userController.logout);
 

@@ -25,7 +25,10 @@ const productController = {
         
         if (req.query.search) {
             const heading = `Resultados de búsqueda: "${req.query.search}"`;
-            const list = products.filter(product => product.name.toLowerCase().includes(req.query.search.toLowerCase()));
+            const list = [
+                ...products.filter(product => product.name.toLowerCase().includes(req.query.search.toLowerCase())),
+                ...products.filter(product => product.shortDescription.toLowerCase().includes(req.query.search.toLowerCase()))
+            ];
             res.render('productList', { heading: heading, products: list });
         }
     },
