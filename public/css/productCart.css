@@ -10,7 +10,6 @@
     width: 684px;
     height: 500px;
     /* background-color: aqua; */
-
 } 
 
 .tuCarrito{
@@ -21,23 +20,26 @@
 
 .resumen{
     width: 60%;
+    background-color: darkgreen;
+}
 
-
+.slider{
+    display: none;
 }
 /*------------------------ MEDIA QUERIES ------------------------*/
 /*------------------------TABLET------------------------*/
 @media (min-width: 600px) {}
 
 .cartBuy{
-    height: 500px;
+    height:auto;
     /* background-color: aquamarine; */
 }
 .bodyCart{
     width: 90%;
 }
 .tuCarrito{
-    width: 90%;
-    /* width: 65%; */
+    /* width: 90%; */
+    width: 100%;
     height:30%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -73,7 +75,7 @@ background-color: darkolivegreen;
     width: 65%;
     height: 200px;
     margin: 41px;
-  
+    /* background-color: yellowgreen */
 }
 .slider{
     display: none;

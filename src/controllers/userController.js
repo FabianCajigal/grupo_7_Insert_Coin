@@ -21,7 +21,8 @@ const userController = {
         req.session.user = { 
             id: userToRegister.id,
             username: userToRegister.username,
-            category: userToRegister.category
+            category: userToRegister.category,
+            image: userToRegister.image
         };
         res.redirect('/');
     },
@@ -34,7 +35,9 @@ const userController = {
             req.session.user = { 
                 id: userToLogin.id,
                 username: userToLogin.username,
-                category: userToLogin.category
+                category: userToLogin.category,
+                image: userToLogin.image
+
             };
             res.redirect('/');
         }

@@ -14,5 +14,21 @@
   "category": "admin",
   "password": "$2a$10$HzoSUsg/dftWURhKxLe.JOirVefR2QH9A.o6X.G2FrtWxMTgi.7oC",
   "image": "default-image.png"
+ },
+ {
+  "id": 3,
+  "email": "johncamilo@gmail.com",
+  "username": "Gilgamesh104",
+  "category": "admin",
+  "password": "$2a$10$zRUtZo.4gGkXbepqYhJa/.EQn533QS6VZJZvue31nkZkCKQ5xtr/i",
+  "image": "users-1676319480556.jpg"
+ },
+ {
+  "id": 4,
+  "email": "johncamilo@gmail.com",
+  "username": "squall",
+  "category": "admin",
+  "password": "$2a$10$kajqrumPOiiktN9Vxcfr9us3tKKc2CrvjFV5LWyiaCTaxW5nQjBHi",
+  "image": "default-image.png"
  }
 ]

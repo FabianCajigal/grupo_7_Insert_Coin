@@ -4,7 +4,54 @@
 
 
 main {
-    padding-block: 169px;
+    padding-block: 25px;
     text-align: center;
     font-size: 20px;
+    justify-content: center;
+}
+
+.perfil-usuario{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    height: 70%;
+    margin: auto;
+}
+.imagen-usuario{
+    width: 70%;
+    height: 70%;
+    margin: auto;
+}
+
+
+
+/*------------------------ MEDIA QUERIES ------------------------*/
+
+@media (min-width: 860px) {
+    .main-user{
+        max-width: 640px;
+        justify-content: center;
+        
+    }
+
+    main section {
+        border: 1px solid var(--gris);
+        padding: 28px;
+        border-radius: 26px;
+        margin: auto;
+    }
+
+    .imagen-usuario{
+        width: 70%;
+        height: 70%;
+        margin: auto;
+    }
+    .perfil-usuario{
+        display: flex;
+        justify-content: space-around;
+        width: 90%;
+        height: 90%;
+        margin: auto;
+        margin-top: 15px;
+    }
 }

@@ -2,21 +2,51 @@
 
 <%- include('./partials/header') %>
 
+<main > 
 
-<main> 
-    <p>perfil del usuario</p>
-    <br>
-    <a href="/account/edit">
+    <section class="main-user">
+        
+        <p>PERFIL DE USUARIO</p>
+        <br>
+        <p><%= user.username %></p>
+        <br>
+        <div class="imagen-usuario">
+            <img src ="img/users/<%= user.image %>">
+        
+        </div>
+    <section class="perfil-usuario">  
+        
+    
+    <div class="form-control">
+        <a href="/account/edit">
         <button type="submit">Editar perfil</button>
-    </a>
+        </a>
+    </div>
+    
+    <div class="form-control">
     <a href="/account/password-change">
         <button type="submit">Cambiar contraseña</button>
     </a>
-    <form action="/account/logout" method="post">
-        <button type="submit">Cerrar sesión</button>
-    </form>
+    </div>
     
-</main>
+    <div class="form-control">
+    <form action="/account/logout" method="post">
+    <button type="submit">Cerrar sesión</button>
+    </form>
+    </div> 
+    
+    <% if (user && user.category == 'admin') { %>
+    <a href="/products/create">
+    <button class="edit" type="button">Crear producto</button> 
+    </a>
+    <% } %>
+    
+    </section>
+    </section>
+    
+    
+    </main>
+
 
 <%- include('./partials/footer') %>
 
