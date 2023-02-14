@@ -18,10 +18,37 @@ main {
     margin: auto;
 }
 .imagen-usuario{
-    width: 70%;
-    height: 70%;
+    width: 50%;
+    height: 50%;
     margin: auto;
 }
+
+.button-profile button{
+    margin-top: 12px;
+    padding: 8px;
+    border: 1px var(--gris) solid;
+    border-radius: 8px;
+    background-color: var(--azul);
+    color: var(--blanco);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.delete button{
+    
+   
+        margin-top: 12px;
+        padding: 8px;
+        border: 1px var(--gris) solid;
+        border-radius: 8px;
+        background-color: red;
+        color: var(--blanco);
+        cursor: pointer;
+        font-weight: bold;
+    
+
+}
+
 
 
 
@@ -42,8 +69,8 @@ main {
     }
 
     .imagen-usuario{
-        width: 70%;
-        height: 70%;
+        width: 50%;
+        height: 50%;
         margin: auto;
     }
     .perfil-usuario{

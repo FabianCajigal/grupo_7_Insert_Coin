@@ -17,29 +17,31 @@
     <section class="perfil-usuario">  
         
     
-    <div class="form-control">
+    <div class="button-profile">
         <a href="/account/edit">
         <button type="submit">Editar perfil</button>
         </a>
     </div>
     
-    <div class="form-control">
+    <div class="button-profile">
     <a href="/account/password-change">
         <button type="submit">Cambiar contraseña</button>
     </a>
     </div>
     
-    <div class="form-control">
+    <div class="button-profile">
+    <% if (user && user.category == 'admin') { %>
+    <a href="/products/create">
+    <button class="create" type="button">Crear producto</button> 
+    </a>
+    <% } %>
+    </div>
+
+    <div class="delete">
     <form action="/account/logout" method="post">
     <button type="submit">Cerrar sesión</button>
     </form>
     </div> 
-    
-    <% if (user && user.category == 'admin') { %>
-    <a href="/products/create">
-    <button class="edit" type="button">Crear producto</button> 
-    </a>
-    <% } %>
     
     </section>
     </section>
