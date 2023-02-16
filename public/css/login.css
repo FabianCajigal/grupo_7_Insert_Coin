@@ -24,7 +24,7 @@ main .title {
 }
 
 .form-control {
-    margin-block: 12px;
+    margin-block: 16px;
 }
 
 .create-form label {
@@ -38,6 +38,10 @@ main .title {
     padding: 8px 2px;
     border: 1px var(--gris) solid;
     border-radius: 12px;
+}
+
+.checkbox {
+    margin: 2px;
 }
 
 .create-form button {

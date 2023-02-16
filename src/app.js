@@ -6,7 +6,10 @@ const productRouter = require('./routes/productRouter');
 const userRouter = require('./routes/userRouter');
 const methodOverride = require('method-override');
 const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const isRemembered = require('./middlewares/users/isRemembered');
 const setUser = require('./middlewares/users/setUser');
+
 
 /*------------ Template engine ------------*/
 app.set('view engine', 'ejs');
@@ -19,6 +22,8 @@ app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(session( {secret: 'insertCoinTech'} ));
+app.use(cookieParser());
+app.use(isRemembered);
 app.use(setUser);
 
 /*------------ Route management ------------*/

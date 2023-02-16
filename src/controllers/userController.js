@@ -32,12 +32,16 @@ const userController = {
     authenticate: (req, res) => {
         const userToLogin = users.find(user => user.username == req.body.username);
         if (userToLogin && bcrypt.compareSync(req.body.password, userToLogin.password)) {
+            
+            if (req.body.rememberMe != undefined) {
+                res.cookie('id', userToLogin.id, { maxAge: 2592000000, httpOnly: true });
+            }
+
             req.session.user = { 
                 id: userToLogin.id,
                 username: userToLogin.username,
                 category: userToLogin.category,
                 image: userToLogin.image
-
             };
             res.redirect('/');
         }
@@ -85,6 +89,7 @@ const userController = {
         }
     },
     logout: (req, res) => {
+        res.clearCookie('id');
         req.session.destroy();
         res.locals.user = null;
         res.redirect('/');
