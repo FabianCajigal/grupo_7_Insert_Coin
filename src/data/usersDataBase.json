@@ -30,5 +30,13 @@
   "category": "admin",
   "password": "$2a$10$kajqrumPOiiktN9Vxcfr9us3tKKc2CrvjFV5LWyiaCTaxW5nQjBHi",
   "image": "default-image.png"
+ },
+ {
+  "id": 5,
+  "email": "cajigalfabian@gmail.com",
+  "username": "Fabian",
+  "category": "admin",
+  "password": "$2a$10$ne58vR0gsTTN9Ahu8uNVrOGLqEDMbPs3vzHUyWzhqQ9Rmi4Cxkj7S",
+  "image": "default-image.png"
  }
 ]
