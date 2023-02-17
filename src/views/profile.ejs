@@ -29,13 +29,14 @@
     </a>
     </div>
     
-    <div class="button-profile">
     <% if (user && user.category == 'admin') { %>
+        <div class="button-profile">
     <a href="/products/create">
     <button class="create" type="button">Crear producto</button> 
     </a>
-    <% } %>
     </div>
+    <% } %>
+    
 
     <div class="delete">
     <form action="/account/logout" method="post">
