@@ -21,7 +21,7 @@
                 </ul>
             </div>
             <div class="buttons">
-                <% if (user && user.category == 'admin') { %>
+                <% if (user && user.admin) { %>
                     <a href="/products/<%= product.id %>/edit">
                         <button class="edit" type="button">EDITAR PRODUCTO</button> 
                     </a>

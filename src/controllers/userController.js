@@ -12,14 +12,14 @@ const userController = {
         db.User.create({
             email: req.body.email,
             username: req.body.username, 
-            category: req.body.category,
+            admin: req.body.category,
             password: bcrypt.hashSync(req.body.password, 10),
             image: req.file ? req.file.filename : 'default-image.png'
         }).then ( (user) => {
             req.session.user = { 
                 id: user.id,
                 username: user.username,
-                category: user.category,
+                admin: user.admin,
                 image: user.image
             };
             res.redirect('/');
@@ -43,7 +43,7 @@ const userController = {
                 req.session.user = { 
                     id: user.id,
                     username: user.username,
-                    category: user.category,
+                    admin: user.admin,
                     image: user.image
                 };
                 res.redirect('/');
