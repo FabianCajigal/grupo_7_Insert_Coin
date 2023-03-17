@@ -1,40 +1,63 @@
 /*------------ Requires ------------*/
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models');
+const Op = db.Sequelize.Op;
 const dataPath = path.resolve(__dirname, '../data/productsDatabase.json');
 const products = require('../data/productsDataBase.json');
 
 const productController = {
     index: (req, res) => {
-        const productsNews = products.filter(product => product.news == true);
-        res.render('home', { products: productsNews });
+        db.Product.findAll ({
+            where: {
+                news: true
+            }
+        }).then( products => {
+            res.render('home', { products: products });
+        });
     },
     list: (req, res) => {
         if (!req.query.category && !req.query.search) {
             const heading = 'Todos los productos';
-            res.render('productList', { heading: heading, products: products });
+            db.Product.findAll().then( products => {
+                res.render('productList', { heading: heading, products: products });
+            });
         }
 
         if (req.query.category) {
             let category = req.query.category.charAt(0).toUpperCase() + req.query.category.slice(1);
             category = category == 'Perifericos' ? 'Periféricos' : category;
             const heading = `Categoría: ${category}`;
-            const list = products.filter(product => product.category == req.query.category);
-            res.render('productList', { heading: heading, products: list });
+            db.Product.findAll({
+                include: { association: 'category' },
+                where: { '$Category.name$' : req.query.category }
+            }).then( products => {
+                res.render('productList', { heading: heading, products: products });
+            });
         }
         
         if (req.query.search) {
             const heading = `Resultados de búsqueda: "${req.query.search}"`;
-            const list = [
-                ...products.filter(product => product.name.toLowerCase().includes(req.query.search.toLowerCase())),
-                ...products.filter(product => product.shortDescription.toLowerCase().includes(req.query.search.toLowerCase()))
-            ];
-            res.render('productList', { heading: heading, products: list });
+            db.Product.findAll({
+                include: { association: 'category' },
+                where: { 
+                    [Op.or]: [
+                        {name: {[Op.like]: '%'+req.query.search+'%'}}, 
+                        {shortDescription: {[Op.like]: '%'+req.query.search+'%'}}, 
+                        {'$Category.name$': {[Op.like]: '%'+req.query.search+'%'}}
+                    ]
+                }
+            }).then( products => {
+                res.render('productList', { heading: heading, products: products });
+            });
         }
     },
     detail: (req, res) => {
-        const product = products.find(product => product.id == req.params.id);
-        res.render('productDetail', { product: product });
+        db.Product.findByPk (req.params.id)
+            .then( product => {
+                product.longDescription = product.longDescription.split(';');
+                res.render('productDetail', { product: product });
+            });
     },
     cart: (req, res) => {
         res.render('productCart');
@@ -43,23 +66,23 @@ const productController = {
         res.render('productCreate');
     },
     store: (req,res) => {
-        const product = { 
-            id: products[products.length - 1].id + 1, 
+        db.Product.create({
             name: req.body.name,
             shortDescription: req.body.shortDescription, 
-            price: parseInt(req.body.price),
-            longDescription: req.body.longDescription.split(';'),
-            category: req.body.category,
-            news: Boolean(parseInt(req.body.news)),
-            image: req.file ? req.file.filename : 'default-image.png' 
-        };
-        products.push(product);
-        fs.writeFileSync(dataPath, JSON.stringify(products, null, ' '));
-        res.redirect('/products');
+            price: req.body.price,
+            longDescription: req.body.longDescription,
+            categoryId: req.body.category,
+            news: req.body.news,
+            image: req.file ? req.file.filename : 'default-image.png'
+        }).then( () => {
+            res.redirect('/products');
+        });
     },
     edit: (req, res) => {
-        const product = products.find(product => product.id == req.params.id);
-        res.render('productEdit', { product: product });
+        db.Product.findByPk (req.params.id)
+            .then( product => {
+                res.render('productEdit', { product: product });
+            });
     },
     update: (req,res) => {
         const product = products.find(product => product.id == req.params.id);

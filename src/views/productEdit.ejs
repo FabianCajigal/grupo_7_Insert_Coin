@@ -39,19 +39,19 @@
                     <textarea name="longDescription" id="longDescription" 
                     class="control" rows="7" 
                     placeholder="Ingresar detalle completo del producto, separando ítems con punto y coma (;)" 
-                    required><%= product.longDescription.join(';') %></textarea>
+                    required><%= product.longDescription %></textarea>
                 </div>
 
                 <div class="form-control">
                     <label for="category">Tipo de producto</label>
                     <select name="category" id="category" class="control" required>
                         <option disabled selected>Seleccionar...</option>
-                        <option value="hardware" <% if (product.category == 'hardware') { %> selected <% } %> >Hardware</option>
-                        <option value="computadoras" <% if (product.category == 'computadoras') { %> selected <% } %> >Computadoras</option>
-                        <option value="notebooks" <% if (product.category == 'notebooks') { %> selected <% } %> >Notebooks</option>
-                        <option value="perifericos" <% if (product.category == 'perifericos') { %> selected <% } %> >Periféricos</option>
-                        <option value="consolas" <% if (product.category == 'consolas') { %> selected <% } %> >Consolas</option>
-                        <option value="videojuegos" <% if (product.category == 'videojuegos') { %> selected <% } %> >Videojuegos</option>
+                        <option value="1" <% if (product.categoryId == '1') { %> selected <% } %> >Hardware</option>
+                        <option value="2" <% if (product.categoryId == '2') { %> selected <% } %> >Computadoras</option>
+                        <option value="3" <% if (product.categoryId == '3') { %> selected <% } %> >Notebooks</option>
+                        <option value="4" <% if (product.categoryId == '4') { %> selected <% } %> >Periféricos</option>
+                        <option value="5" <% if (product.categoryId == '5') { %> selected <% } %> >Consolas</option>
+                        <option value="6" <% if (product.categoryId == '6') { %> selected <% } %> >Videojuegos</option>
                     </select>
                 </div>
 

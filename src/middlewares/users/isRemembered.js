@@ -1,17 +1,21 @@
-const users = require('../../data/usersDataBase.json');
+const db = require('../../database/models');
 
 function isRemembered(req, res, next) {
     if (req.cookies && req.cookies.id) {
-        const userToRemember = users.find(user => user.id == req.cookies.id);
-        req.session.user = { 
-            id: userToRemember.id,
-            username: userToRemember.username,
-            category: userToRemember.category,
-            image: userToRemember.image
-        };
+        db.User.findByPk (req.cookies.id, { raw: true })
+            .then( user => {
+                req.session.user = { 
+                    id: user.id,
+                    username: user.username,
+                    admin: user.admin,
+                    image: user.image
+                };
+                next();
+            });
     } 
-
-    next();
+    else {
+        next();
+    } 
 }
 
 module.exports = isRemembered;
