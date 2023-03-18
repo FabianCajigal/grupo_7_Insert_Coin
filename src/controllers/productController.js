@@ -3,8 +3,6 @@ const fs = require('fs');
 const path = require('path');
 const db = require('../database/models');
 const Op = db.Sequelize.Op;
-const dataPath = path.resolve(__dirname, '../data/productsDatabase.json');
-const products = require('../data/productsDataBase.json');
 
 const productController = {
     index: (req, res) => {
@@ -85,33 +83,42 @@ const productController = {
             });
     },
     update: (req,res) => {
-        const product = products.find(product => product.id == req.params.id);
-        const index = products.findIndex(product => product.id == req.params.id);
-        const editedProduct = {
-            id: product.id,
-            name: req.body.name,
-            shortDescription: req.body.shortDescription, 
-            price: parseInt(req.body.price),
-            longDescription: req.body.longDescription.split(';'),
-            category: req.body.category,
-            news: Boolean(parseInt(req.body.news)),
-            image: req.file ? req.file.filename : product.image 
-        };
-        if (req.file && product.image != 'default-image.png') {
-            fs.unlinkSync(path.resolve(__dirname, `../../public/img/products/${product.image}`));
-        }
-        products[index] = editedProduct;
-        fs.writeFileSync(dataPath, JSON.stringify(products, null, ' '));
-        res.redirect('/products/' + product.id);
+        db.Product.findByPk (req.params.id)
+            .then( product => {
+                const oldImage = product.image;
+                db.Product.update({
+                    name: req.body.name,
+                    shortDescription: req.body.shortDescription, 
+                    price: req.body.price,
+                    longDescription: req.body.longDescription,
+                    categoryId: req.body.category,
+                    news: req.body.news,
+                    image: req.file ? req.file.filename : oldImage
+                },
+                {
+                    where: { id: req.params.id }
+                })
+                    .then( () => {
+                        if (req.file && oldImage != 'default-image.png') {
+                            fs.unlinkSync(path.resolve(__dirname, `../../public/img/products/${oldImage}`));
+                        };
+                        res.redirect('/products/' + req.params.id);
+                    })
+            });
     },
     destroy: (req,res) => {
-        const product = products.find(product => product.id == req.params.id);
-        const newProducts = products.filter(product => product.id != req.params.id);
-        fs.writeFileSync(dataPath, JSON.stringify(newProducts, null, ' '));
-        if (product.image != 'default-image.png') {
-            fs.unlinkSync(path.resolve(__dirname, `../../public/img/products/${product.image}`));
-        }
-        res.redirect('/');
+        db.Product.findByPk (req.params.id)
+            .then( product => {
+                const oldImage = product.image;
+                db.Product.destroy({ 
+                    where: { id: req.params.id } 
+                }).then( () => {
+                    if (oldImage != 'default-image.png') {
+                        fs.unlinkSync(path.resolve(__dirname, `../../public/img/products/${oldImage}`));
+                    }
+                    res.redirect('/');
+                })
+            })
     }    
 };
 
