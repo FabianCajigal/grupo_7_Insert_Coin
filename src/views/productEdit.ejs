@@ -17,21 +17,27 @@
                     <label for="name">Nombre del producto</label>
                     <input type="text" name="name" id="name" 
                     class="control" placeholder="Ingresar nombre" 
-                    value="<%= product.name %>" required>
+                    <% if (!locals.old) { %> value="<%= product.name %>" <% } %>
+                    <% if (locals.old) { %> value="<%= locals.old && old.name %>" <% } %> required>
+                    <% if(locals.errors && errors.name) { %>
+                        <small class="text-danger"> <%= errors.name.msg %> </small>
+                    <% } %>
                 </div>
 
                 <div class="form-control">
                     <label for="shortDescription">Descripción breve</label>
                     <input type="text" name="shortDescription" id="shortDescription" 
                     class="control" placeholder="Ingresar descripción breve" 
-                    value="<%= product.shortDescription %>" required>
+                    <% if (!locals.old) { %> value="<%= product.shortDescription %>" <% } %> 
+                    <% if (locals.old) { %> value="<%= locals.old && old.shortDescription %>" <% } %> required>
                 </div>
 
                 <div class="form-control">
                     <label for="price">Precio</label>
                     <input type="number" name="price" id="price" 
                     class="control" placeholder="Ingresar precio" 
-                    value="<%= product.price %>" required>
+                    <% if (!locals.old) { %> value="<%= product.price %>" <% } %> 
+                    <% if (locals.old) { %> value="<%= locals.old && old.price %>" <% } %> required>
                 </div>
 
                 <div class="form-control">
@@ -39,7 +45,10 @@
                     <textarea name="longDescription" id="longDescription" 
                     class="control" rows="7" 
                     placeholder="Ingresar detalle completo del producto, separando ítems con punto y coma (;)" 
-                    required><%= product.longDescription %></textarea>
+                    required><% if (!locals.old) { %><%= product.longDescription %><% } %><% if (locals.old) { %><%= locals.old && old.longDescription %><% } %></textarea>
+                    <% if(locals.errors && errors.longDescription) { %>
+                        <small class="text-danger"> <%= errors.longDescription.msg %> </small>
+                    <% } %>
                 </div>
 
                 <div class="form-control">

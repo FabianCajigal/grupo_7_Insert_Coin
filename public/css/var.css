@@ -30,3 +30,7 @@ body {
     background-color: var(--blanco);
 }
 
+small.text-danger {
+    color: red;
+    font-weight: normal;
+}

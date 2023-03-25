@@ -5,6 +5,7 @@ const productController = require('../controllers/productController');
 const path = require('path');
 const multer = require('multer');
 const isAdmin = require('../middlewares/users/isAdmin');
+const validateProduct = require('../middlewares/validator/validateProduct');
 
 /*------------ Multer setup ------------*/
 const storage = multer.diskStorage({ 
@@ -22,14 +23,14 @@ router.get('/', productController.list);
 
 /*------------ Get creation form & submit new product ------------*/
 router.get('/create', isAdmin, productController.create);
-router.post('/', isAdmin, upload.single('image'), productController.store);
+router.post('/', isAdmin, upload.single('image'), validateProduct, productController.store);
 
 /*------------ Get product detail ------------*/
 router.get('/:id', productController.detail);
 
 /*------------ Get edition form & submit updated product ------------*/
 router.get('/:id/edit', isAdmin, productController.edit);
-router.put('/:id', isAdmin, upload.single('image'), productController.update);
+router.put('/:id', isAdmin, upload.single('image'), validateProduct, productController.update);
 
 /*------------ Delete product ------------*/
 router.delete('/:id', isAdmin, productController.destroy);

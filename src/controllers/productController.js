@@ -1,6 +1,7 @@
 /*------------ Requires ------------*/
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require('express-validator');
 const db = require('../database/models');
 const Op = db.Sequelize.Op;
 
@@ -64,17 +65,25 @@ const productController = {
         res.render('productCreate');
     },
     store: (req,res) => {
-        db.Product.create({
-            name: req.body.name,
-            shortDescription: req.body.shortDescription, 
-            price: req.body.price,
-            longDescription: req.body.longDescription,
-            categoryId: req.body.category,
-            news: req.body.news,
-            image: req.file ? req.file.filename : 'default-image.png'
-        }).then( () => {
-            res.redirect('/products');
-        });
+        let errors = validationResult(req);
+
+        if (errors.isEmpty()) {
+            db.Product.create({
+                name: req.body.name,
+                shortDescription: req.body.shortDescription, 
+                price: req.body.price,
+                longDescription: req.body.longDescription,
+                categoryId: req.body.category,
+                news: req.body.news,
+                image: req.file ? req.file.filename : 'default-image.png'
+            }).then( () => {
+                res.redirect('/products');
+            });
+        }
+        else {
+            res.render('productCreate', { errors: errors.mapped(), old: req.body });
+        }
+        
     },
     edit: (req, res) => {
         db.Product.findByPk (req.params.id)
@@ -83,28 +92,38 @@ const productController = {
             });
     },
     update: (req,res) => {
-        db.Product.findByPk (req.params.id)
-            .then( product => {
-                const oldImage = product.image;
-                db.Product.update({
-                    name: req.body.name,
-                    shortDescription: req.body.shortDescription, 
-                    price: req.body.price,
-                    longDescription: req.body.longDescription,
-                    categoryId: req.body.category,
-                    news: req.body.news,
-                    image: req.file ? req.file.filename : oldImage
-                },
-                {
-                    where: { id: req.params.id }
-                })
-                    .then( () => {
-                        if (req.file && oldImage != 'default-image.png') {
-                            fs.unlinkSync(path.resolve(__dirname, `../../public/img/products/${oldImage}`));
-                        };
-                        res.redirect('/products/' + req.params.id);
+        let errors = validationResult(req);
+
+        if (errors.isEmpty()) {
+            db.Product.findByPk (req.params.id)
+                .then( product => {
+                    const oldImage = product.image;
+                    db.Product.update({
+                        name: req.body.name,
+                        shortDescription: req.body.shortDescription, 
+                        price: req.body.price,
+                        longDescription: req.body.longDescription,
+                        categoryId: req.body.category,
+                        news: req.body.news,
+                        image: req.file ? req.file.filename : oldImage
+                    },
+                    {
+                        where: { id: req.params.id }
                     })
-            });
+                        .then( () => {
+                            if (req.file && oldImage != 'default-image.png') {
+                                fs.unlinkSync(path.resolve(__dirname, `../../public/img/products/${oldImage}`));
+                            };
+                            res.redirect('/products/' + req.params.id);
+                        })
+                });
+            }
+            else {
+                db.Product.findByPk (req.params.id)
+                    .then( product => {
+                        res.render('productEdit', { errors: errors.mapped(), product: product, old: req.body });
+                });          
+            }
     },
     destroy: (req,res) => {
         db.Product.findByPk (req.params.id)

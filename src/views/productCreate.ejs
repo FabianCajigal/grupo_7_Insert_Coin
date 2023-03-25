@@ -15,41 +15,60 @@
 
                 <div class="form-control">
                     <label for="name">Nombre del producto</label>
-                    <input type="text" name="name" id="name" class="control" placeholder="Ingresar nombre" required>
+                    <input type="text" name="name" id="name" 
+                    class="control" placeholder="Ingresar nombre" 
+                    value="<%= locals.old && old.name %>" required>
+                    <% if(locals.errors && errors.name) { %>
+                        <small class="text-danger"> <%= errors.name.msg %> </small>
+                    <% } %>
                 </div>
 
                 <div class="form-control">
                     <label for="shortDescription">Descripción breve</label>
-                    <input type="text" name="shortDescription" id="shortDescription" class="control" placeholder="Ingresar descripción breve" required>
+                    <input type="text" name="shortDescription" id="shortDescription" 
+                    class="control" placeholder="Ingresar descripción breve" 
+                    value="<%= locals.old && old.shortDescription %>" required>
                 </div>
 
                 <div class="form-control">
                     <label for="price">Precio</label>
-                    <input type="number" name="price" id="price" class="control" placeholder="Ingresar precio" required>
+                    <input type="number" name="price" id="price" 
+                    class="control" placeholder="Ingresar precio" 
+                    value="<%= locals.old && old.price %>" required>
                 </div>
 
                 <div class="form-control">
                     <label for="longDescription">Detalle completo</label>
-                    <textarea name="longDescription" id="longDescription" class="control" rows="7" placeholder="Ingresar detalle completo del producto, separando ítems con punto y coma (;)" required></textarea>
+                    <textarea name="longDescription" id="longDescription" 
+                    class="control" rows="7" 
+                    placeholder="Ingresar detalle completo del producto, separando ítems con punto y coma (;)" 
+                    required><%= locals.old && old.longDescription %></textarea>
+                    <% if(locals.errors && errors.longDescription) { %>
+                        <small class="text-danger"> <%= errors.longDescription.msg %> </small>
+                    <% } %>
                 </div>
                 
                 <div class="form-control">
                     <label for="category">Tipo de producto</label>
                     <select name="category" id="category" class="control" required>
                         <option disabled selected>Seleccionar...</option>
-                        <option value="1">Hardware</option>
-                        <option value="2">Computadoras</option>
-                        <option value="3">Notebooks</option>
-                        <option value="4">Periféricos</option>
-                        <option value="5">Consolas</option>
-                        <option value="6">Videojuegos</option>
+                        <option value="1" <% if (locals.old && old.category == "1") { %> selected <% } %> >Hardware</option>
+                        <option value="2" <% if (locals.old && old.category == "2") { %> selected <% } %> >Computadoras</option>
+                        <option value="3" <% if (locals.old && old.category == "3") { %> selected <% } %> >Notebooks</option>
+                        <option value="4" <% if (locals.old && old.category == "4") { %> selected <% } %> >Periféricos</option>
+                        <option value="5" <% if (locals.old && old.category == "5") { %> selected <% } %> >Consolas</option>
+                        <option value="6" <% if (locals.old && old.category == "6") { %> selected <% } %> >Videojuegos</option>
                     </select>
                 </div>
 
                 <div class="form-control">
                     <label for="news">Producto destacado:</label>
-                    <label class="radio" for="news"><input type="radio" name="news" id="news" value="1" class="radio-control"> Sí</label>
-                    <label class="radio" for="not-news"><input type="radio" name="news" id="not-news" value="0" class="radio-control" checked> No</label>
+                    <label class="radio" for="news"><input type="radio" 
+                        name="news" id="news" value="1" <% if (locals.old && old.news) { %> checked <% } %>
+                        class="radio-control"> Sí</label>
+                    <label class="radio" for="not-news"><input type="radio" 
+                        name="news" id="not-news" value="0" <% if (locals.old && !old.news) { %> checked <% } %>
+                        class="radio-control" checked> No</label>
                 </div>
 
                 <div class="form-control">
