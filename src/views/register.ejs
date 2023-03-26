@@ -37,8 +37,8 @@
                     <label for="category">Categoría de usuario</label>
                     <select name="category" id="category" class="control" required>
                         <option disabled selected>Seleccionar...</option>
-                        <option value="1" <% if (locals.old && old.admin) { %> selected <% } %> >Administrador</option>
-                        <option value="0" <% if (locals.old && !old.admin) { %> selected <% } %> >Usuario</option>
+                        <option value="1" <% if (locals.old && old.category) { %> selected <% } %> >Administrador</option>
+                        <option value="0" <% if (locals.old && !old.category) { %> selected <% } %> >Usuario</option>
                     </select>
                 </div>
 
@@ -53,6 +53,9 @@
                 <div class="form-control">
                     <label for="password-confirm">Confirmar contraseña</label>
                     <input type="password" name="passwordConfirm" id="passwordConfirm" class="control" required>
+                    <% if(locals.errors && errors.passwordConfirm) { %>
+                        <small class="text-danger"> <%= errors.passwordConfirm.msg %> </small>
+                    <% } %>
                 </div>
                 
                 <div class="form-control">

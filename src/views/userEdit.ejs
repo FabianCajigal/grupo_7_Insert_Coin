@@ -15,12 +15,24 @@
 
                 <div class="form-control">
                     <label for="email">Dirección de correo electrónico</label>
-                    <input type="email" name="email" id="email" class="control" value="<%= user.email %>" required>
+                    <input type="email" name="email" 
+                    id="email" class="control" 
+                    <% if (!locals.old) { %> value="<%= user.email %>" <% } %>
+                    <% if (locals.old) { %> value="<%= locals.old && old.email %>" <% } %> required>
+                    <% if(locals.errors && errors.email) { %>
+                        <small class="text-danger"> <%= errors.email.msg %> </small>
+                    <% } %>
                 </div>
 
                 <div class="form-control">
                     <label for="username">Usuario</label>
-                    <input type="text" name="username" id="username" class="control" value="<%= user.username %>" required>
+                    <input type="text" name="username" 
+                    id="username" class="control" 
+                    <% if (!locals.old) { %> value="<%= user.username %>" <% } %>
+                    <% if (locals.old) { %> value="<%= locals.old && old.username %>" <% } %> required>
+                    <% if(locals.errors && errors.username) { %>
+                        <small class="text-danger"> <%= errors.username.msg %> </small>
+                    <% } %>
                 </div>
 
                 <div class="form-control">

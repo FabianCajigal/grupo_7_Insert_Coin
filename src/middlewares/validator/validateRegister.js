@@ -9,5 +9,11 @@ module.exports = [
         .isEmail().withMessage('Debes completar con un email válido').bail(),
     check ('password')
         .notEmpty().withMessage('La contraseña es obligatoria').bail()
-        .isLength({min:8}).withMessage('La contraseña es demasiado corta, debe tener al menos 8 caracteres')
+        .isLength({min:8}).withMessage('La contraseña es demasiado corta, debe tener al menos 8 caracteres'),
+    check ('passwordConfirm').custom((value, { req }) => {
+            if (value !== req.body.password) {
+                throw new Error('Las contraseñas no coinciden');
+            }
+            return true;
+        })
 ]
