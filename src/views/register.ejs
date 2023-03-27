@@ -18,6 +18,7 @@
                     <input type="email" name="email" 
                     id="email" class="control" 
                     value="<%= locals.old && old.email %>" required>
+                    <small class="text-danger" id="emailError"></small>
                     <% if(locals.errors && errors.email) { %>
                         <small class="text-danger"> <%= errors.email.msg %> </small>
                     <% } %>
@@ -28,6 +29,7 @@
                     <input type="text" name="username" 
                     id="username" class="control" 
                     value="<%= locals.old && old.username %>" required>
+                    <small class="text-danger" id="usernameError"></small>
                     <% if(locals.errors && errors.username) { %>
                         <small class="text-danger"> <%= errors.username.msg %> </small>
                     <% } %>
@@ -45,6 +47,7 @@
                 <div class="form-control">
                     <label for="password">Contraseña</label>
                     <input type="password" name="password" id="password" class="control" required>
+                    <small class="text-danger" id="passwordError"></small>
                     <% if(locals.errors && errors.password) { %>
                         <small class="text-danger"> <%= errors.password.msg %> </small>
                     <% } %>
@@ -53,6 +56,7 @@
                 <div class="form-control">
                     <label for="password-confirm">Confirmar contraseña</label>
                     <input type="password" name="passwordConfirm" id="passwordConfirm" class="control" required>
+                    <small class="text-danger" id="passwordConfirmError"></small>
                     <% if(locals.errors && errors.passwordConfirm) { %>
                         <small class="text-danger"> <%= errors.passwordConfirm.msg %> </small>
                     <% } %>
@@ -71,5 +75,7 @@
     </section>
 
 </main>
+
+<script src="/js/registerValidator.js"></script>
 
 <%- include('./partials/footer') %>

@@ -18,6 +18,7 @@
                     <input type="text" name="name" id="name" 
                     class="control" placeholder="Ingresar nombre" 
                     value="<%= locals.old && old.name %>" required>
+                    <small class="text-danger" id="nameError"></small>
                     <% if(locals.errors && errors.name) { %>
                         <small class="text-danger"> <%= errors.name.msg %> </small>
                     <% } %>
@@ -43,6 +44,7 @@
                     class="control" rows="7" 
                     placeholder="Ingresar detalle completo del producto, separando ítems con punto y coma (;)" 
                     required><%= locals.old && old.longDescription %></textarea>
+                    <small class="text-danger" id="longDescriptionError"></small>
                     <% if(locals.errors && errors.longDescription) { %>
                         <small class="text-danger"> <%= errors.longDescription.msg %> </small>
                     <% } %>
@@ -84,5 +86,7 @@
     </section>
 
 </main>
+
+<script src="/js/productValidator.js"></script>
 
 <%- include('./partials/footer') %>

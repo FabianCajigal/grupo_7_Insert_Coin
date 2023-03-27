@@ -15,11 +15,13 @@
             <div>
                 <label for="username">Usuario</label>
                 <input type="text" name="username" id="username" class="control" placeholder="Indique su usuario" required>
+                <small class="text-danger" id="usernameError"></small>
             </div>
             <br>
             <div>
                 <label for="password">Contraseña</label>
                 <input type="password" name="password" id="password" class="control" placeholder="Indique su contraseña" required>
+                <small class="text-danger" id="passwordError"></small>
             </div>
             <div class="form-control">
                 <label class="checkbox" for="rememberMe"><input type="checkbox" name="rememberMe" id="rememberMe" class="checkbox-control"> Recordar usuario</label>
@@ -35,6 +37,8 @@
 
     </section>
 </main>
+
+<script src="/js/loginValidator.js"></script>
 
 <%- include('./partials/footer') %>
 

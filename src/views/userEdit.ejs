@@ -19,6 +19,7 @@
                     id="email" class="control" 
                     <% if (!locals.old) { %> value="<%= user.email %>" <% } %>
                     <% if (locals.old) { %> value="<%= locals.old && old.email %>" <% } %> required>
+                    <small class="text-danger" id="emailError"></small>
                     <% if(locals.errors && errors.email) { %>
                         <small class="text-danger"> <%= errors.email.msg %> </small>
                     <% } %>
@@ -30,6 +31,7 @@
                     id="username" class="control" 
                     <% if (!locals.old) { %> value="<%= user.username %>" <% } %>
                     <% if (locals.old) { %> value="<%= locals.old && old.username %>" <% } %> required>
+                    <small class="text-danger" id="usernameError"></small>
                     <% if(locals.errors && errors.username) { %>
                         <small class="text-danger"> <%= errors.username.msg %> </small>
                     <% } %>
@@ -57,5 +59,7 @@
     </section>
 
 </main>
+
+<script src="/js/userEditValidator.js"></script>
 
 <%- include('./partials/footer') %>
