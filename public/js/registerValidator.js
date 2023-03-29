@@ -44,10 +44,15 @@ window.addEventListener('load', () => {
             errores.password = 'La contraseña debe contener al menos 8 caracteres';
         }
 
+        if (passwordConfirm.value != password.value) {
+            errores.passwordConfirm = 'Las contraseñas no coinciden';
+        }
+
         if (Object.keys(errores).length >= 1) {
             emailError.innerText = errores.email ? errores.email : '';
             usernameError.innerText = errores.username ? errores.username : '';
             passwordError.innerText = errores.password ? errores.password : '';
+            passwordConfirmError.innerText = errores.passwordConfirm ? errores.passwordConfirm : '';
         }
         else {
             form.submit();

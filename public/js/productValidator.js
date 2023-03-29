@@ -14,14 +14,14 @@ window.addEventListener('load', () => {
             errores.name = 'El nombre del producto es obligatorio';
         }
         if (name.value.length > 0 && name.value.length < 5) {
-            errores.name = 'El nombre del producto debe contar con al menos cinco caracteres';
+            errores.name = 'El nombre del producto debe contar con al menos 5 caracteres';
         }
 
         if (longDescription.value.length == 0) {
-            errores.longDescription = 'El nombre del producto es obligatorio';
+            errores.longDescription = 'La descripción del producto es obligatoria';
         }
-        if (longDescription.value.length > 0 && longDescription.value.length < 5) {
-            errores.longDescription = 'El nombre del producto debe contar con al menos cinco caracteres';
+        if (longDescription.value.length > 0 && longDescription.value.length < 20) {
+            errores.longDescription = 'La descripción del producto debe contar con al menos 20 caracteres';
         }
 
         if (Object.keys(errores).length >= 1) {
