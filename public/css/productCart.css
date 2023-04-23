@@ -8,7 +8,7 @@
     margin-top: 50px;
     margin-bottom: 50px;
     width: 684px;
-    height: 500px;
+
     /* background-color: aqua; */
 } 
 
@@ -32,6 +32,7 @@
 
 .cartBuy{
     height:auto;
+    margin: auto;
     /* background-color: aquamarine; */
 }
 .bodyCart{
@@ -55,21 +56,21 @@
     grid-row-end: 3 ;
 }
 
-/* .itemCarrito2{
-background-color: darkolivegreen;
+.itemCarrito2{
+margin: auto;
 }
 
 .itemCarrito3{
-    background-color: rgb(39, 0, 212);
-    }
+    margin: auto;
+}
 
     .itemCarrito4{
-        background-color: rgb(204, 127, 19);
-        }
+        margin: auto;
+    }
 
         .itemCarrito5{
-            background-color: rgb(154, 169, 207);
-            } */
+            margin: auto;
+        }
 
 .resumen{
     width: 65%;
@@ -134,16 +135,36 @@ background-color: darkolivegreen;
         .itemCarrito5{
             background-color: rgb(154, 169, 207);
             } */
-.resumen{
-    width: 65%;
-    height: 200px;
-    /* background-color: yellowgreen; */
-}
+            .Resumen-compra {  
+                width: 65%;
+                height: 30%;
+                display: grid;
+                grid-template-columns: 1.5fr 0.2fr 1.3fr;
+                grid-template-rows: 0.1fr 0.1fr 0.4fr 0.8fr;
+                gap: 0px 0px;
+                grid-auto-flow: row;
+                grid-template-areas:
+                  "Resumen . ."
+                  "Continuar-compra . ."
+                  "Cantidad-de-productos . Valor"
+                  "Total Total Total";
+              }
+              
+              .Resumen { grid-area: Resumen; }
+              
+              .Continuar-compra { grid-area: Continuar-compra; }
+              
+              .Cantidad-de-productos { grid-area: Cantidad-de-productos; }
+              
+              .Valor { grid-area: Valor; }
+              
+              .Total { grid-area: Total; }
+              
 .slider{
     float: right;
     margin: 0;
     width: 30%;
-    height: 90%;
+    height: 75%;
     /* background-color: rgb(240, 116, 116); */
     display: grid;
     grid-row:repeat(3, 1.fr); ;
