@@ -3,128 +3,144 @@
 @import url(footer.css);
 
 
-.bodyCart{
+.bodyCart {
     margin: auto;
     margin-top: 50px;
     margin-bottom: 50px;
-    width: 684px;
+    width: auto;
 
     /* background-color: aqua; */
-} 
-
-.tuCarrito{
-    width: 100%;
-    height: 100%;
-    /* background-color: brown; */
 }
 
-.resumen{
+.tuCarrito {
+    width: 100%;
+    height: auto
+        /* background-color: brown; */
+}
+
+.resumen {
     width: 60%;
     background-color: darkgreen;
 }
 
-.slider{
+.Resumen-compra {
+    margin-left: 75px;
+    margin-bottom: 50px;
+}
+
+.slider {
     display: none;
 }
+
 /*------------------------ MEDIA QUERIES ------------------------*/
 /*------------------------TABLET------------------------*/
 @media (min-width: 600px) {}
 
-.cartBuy{
-    height:auto;
+.cartBuy {
+    height: auto;
     margin: auto;
     /* background-color: aquamarine; */
 }
-.bodyCart{
+
+.bodyCart {
     width: 90%;
 }
-.tuCarrito{
+
+.tuCarrito {
     /* width: 90%; */
     width: 100%;
-    height:30%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-row: repeat(3, 1.fr);;
-}
-.itemCarrito1 img{
-    width: 100%;
-    height: 100%;
-}
-.itemCarrito1{
-    /* background-color: blueviolet; */
-    grid-row-start: 1 ;
-    grid-row-end: 3 ;
-}
-
-.itemCarrito2{
-margin: auto;
-}
-
-.itemCarrito3{
-    margin: auto;
-}
-
-    .itemCarrito4{
-        margin: auto;
-    }
-
-        .itemCarrito5{
-            margin: auto;
-        }
-
-.resumen{
-    width: 65%;
-    height: 200px;
-    margin: 41px;
-    /* background-color: yellowgreen */
-}
-.slider{
-    display: none;
-}
-/* ------------- COMPUTADORA ------------- */
-@media (min-width: 860px) {
-    .cartBuy{
-        height: 500px;
-        /* background-color: aquamarine; */
-    }
-.bodyCart{
-    width: 90%;
-    height: 90%;
-    display: flex;
-    justify-content: space-around;
-
-    
-
-}
-.tuCarrito{
-    
-    width: 65%;
-    height: 50%;
+    height: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-row: repeat(3, 1.fr);
-    gap: 10px;
+    ;
 }
-.itemCarrito1 img{
+
+.itemCarrito1 img {
     width: 100%;
     height: 100%;
 }
 
-.itemCarrito1{
+.itemCarrito1 {
     /* background-color: blueviolet; */
-    grid-row-start: 1 ;
-    grid-row-end: 3 ;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
 
+.itemCarrito2 {
+    margin: auto;
 }
-.itemCarrito1 img{
-    width: 100%;
-    height: 100%;
+
+.itemCarrito3 {
+    margin: auto;
 }
-/* .itemCarrito2{
+
+.itemCarrito4 {
+    margin: auto;
+}
+
+.itemCarrito5 {
+    margin: auto;
+}
+
+.resumen {
+    width: 65%;
+    height: auto;
+    margin: 41px;
+    /* background-color: yellowgreen */
+}
+
+.slider {
+    display: none;
+}
+
+/* ------------- COMPUTADORA ------------- */
+@media (min-width: 860px) {
+    .cartBuy {
+        height: auto;
+        /* background-color: aquamarine; */
+    }
+
+    .bodyCart {
+        width: 90%;
+        height: 90%;
+        display: flex;
+        justify-content: space-around;
+
+    }
+
+    .tuCarrito {
+
+        width: 65%;
+        height: 50%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row: repeat(3, 1.fr);
+        gap: 10px;
+    }
+
+    .itemCarrito1 img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .itemCarrito1 {
+        /* background-color: blueviolet; */
+        grid-row-start: 1;
+        grid-row-end: 3;
+
+    }
+
+    .itemCarrito1 img {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* .itemCarrito2{
 background-color: darkolivegreen;
 } */
 
-/* .itemCarrito3{
+    /* .itemCarrito3{
     background-color: rgb(39, 0, 212);
     }
 
@@ -135,64 +151,81 @@ background-color: darkolivegreen;
         .itemCarrito5{
             background-color: rgb(154, 169, 207);
             } */
-            .Resumen-compra {  
-                width: 65%;
-                height: 30%;
-                display: grid;
-                grid-template-columns: 1.5fr 0.2fr 1.3fr;
-                grid-template-rows: 0.1fr 0.1fr 0.4fr 0.8fr;
-                gap: 0px 0px;
-                grid-auto-flow: row;
-                grid-template-areas:
-                  "Resumen . ."
-                  "Continuar-compra . ."
-                  "Cantidad-de-productos . Valor"
-                  "Total Total Total";
-              }
-              
-              .Resumen { grid-area: Resumen; }
-              
-              .Continuar-compra { grid-area: Continuar-compra; }
-              
-              .Cantidad-de-productos { grid-area: Cantidad-de-productos; }
-              
-              .Valor { grid-area: Valor; }
-              
-              .Total { grid-area: Total; }
-              
-.slider{
-    float: right;
-    margin: 0;
-    width: 30%;
-    height: 75%;
-    /* background-color: rgb(240, 116, 116); */
-    display: grid;
-    grid-row:repeat(3, 1.fr); ;
-    /* justify-content: space-around; */
-}
+    .Resumen-compra {
+        margin-left: 75px;
+        margin-bottom: 50px;
+        width: 65%;
+        height: 30%;
+        display: grid;
+        grid-template-columns: 1.5fr 0.2fr 1.3fr;
+        grid-template-rows: 0.1fr 0.1fr 0.4fr 0.8fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "Resumen . ."
+            "Continuar-compra . ."
+            "Cantidad-de-productos . Valor"
+            "Total Total Total";
+    }
 
-.sliderItem1{
-    /* background-color: rgb(113, 255, 105); */
-    height: 100%;
-  
-}
-.sliderItem1 img{
-    margin: 0%;
-    width: 100%;
-    height: 70%;
-    
-}
-.sliderItem2{
-    /* background-color: rgb(143, 105, 255); */
-    height: 100%;
-}
-.sliderItem2 img{
-    margin: 0%;
-    width: 100%;
-    height: 70%;
-    
-}
-/* .sliderItem3{
+    .Resumen {
+        grid-area: Resumen;
+    }
+
+    .Continuar-compra {
+        grid-area: Continuar-compra;
+    }
+
+    .Cantidad-de-productos {
+        grid-area: Cantidad-de-productos;
+    }
+
+    .Valor {
+        grid-area: Valor;
+    }
+
+    .Total {
+        grid-area: Total;
+    }
+
+    .slider {
+        float: right;
+        margin: 0;
+        width: 50%;
+        height: 75%;
+        /* background-color: rgb(240, 116, 116); */
+        display: grid;
+        grid-row: repeat(3, 1.fr);
+        ;
+        /* justify-content: space-around; */
+    }
+
+    .sliderItem1 {
+        /* background-color: rgb(113, 255, 105); */
+        height: 100%;
+
+    }
+
+    .sliderItem1 img {
+        margin: 0%;
+        width: 100%;
+        height: 70%;
+
+    }
+
+    .sliderItem2 {
+        /* background-color: rgb(143, 105, 255); */
+        height: 100%;
+    }
+
+    .sliderItem2 img {
+        margin: 0%;
+        width: 100%;
+        height: 70%;
+
+    }
+
+    /* .sliderItem3{
     background-color: rgb(255, 105, 105);
 } */
 }
