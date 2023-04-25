@@ -155,7 +155,10 @@ const userController = {
                                 });
                     }
                     else {
-                        res.render('passwordChange');
+                        let errors = {
+                            credentials: { msg: 'Contraseña incorrecta' }
+                        }
+                        res.render('passwordChange', { errors: errors });
                     }
                 });  
             }
